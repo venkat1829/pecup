@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEC.UP</title>
+    <link rel="stylesheet" href="css/styles2.css">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Favicon for different sizes -->
+    <link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicon-192x192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="/images/favicon-512x512.png" sizes="512x512" type="image/png">
+    <!-- Apple Touch Icon for Safari bookmarks -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQ8G7RBY0H"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MQ8G7RBY0H');
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">PEC.UP</a>
+            <ul class="nav-links">
+                <li class="large-gap"><a href="#home">Home</a></li>
+                <li class="large-gap"><a href="#reminders">Reminders</a></li>
+                <li class="large-gap"><a href="#resources">Resources</a></li>
+                <li class="large-gap"><a href="#archive">Archive</a></li>
+            </ul>
+            <a href="https://www.linkedin.com/in/yeswanth-madasu-41525b297/" class="btn-contact">linkedin</a>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1><span class="bored">Bored</span>
+                <span class="with">with</span>
+                <span class="with"> studies?</span> 
+                <span class="not">Not</span>
+                <span class="anymore"> anymore!</span> </h1>
+            <p>pickup by 
+                <span class="pickup">PEC.UP</span> </p>
+            <a href="#resources" class="btn-project">resources?</a>
+        </div>
+    </section>
+
+    <!-- <section id="imp">
+        <h2>imp</h2>
+        <p>Details about imp...</p>
+        <p>here we will display any important announcments, not every day..</p>
+    </section> -->
+
+    <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to our website, where we provide a range of useful study resources to support your academic journey.</p>
+
+        <p>We offer previous year question papers for various examinations, including mid-semester exams (Mid-1, Mid-2), regular semester exams, and supplementary exams under the R23 regulations.</p>
+
+        <p>Our offerings include:</p>
+        <ul>
+                <li><strong>Previous Year Question Papers:</strong> Mid-1, Mid-2 exams, regular semester exams, and supplementary exams (R23 regulations).</li>
+                <li><strong>Study Materials:</strong> Comprehensive notes and guides.</li>
+                <li><strong>Assignment Questions with Answers:</strong> Assignments from various subjects, with solutions when available.</li>
+                <li><strong>Record Manuals:</strong> Lab records and practical manuals.</li>
+        </ul>
+
+        <p>Our resources are well-organized to help you find what you need efficiently.</p>
+        
+    </section>
+
+    <div style="height: 50px;"></div> <!-- Spacer -->
+
+    <section id="reminders">
+        <h2>Reminders</h2>
+        <div id="reminder-text">
+            <ul>
+            <p>Results are Uploaded!! <a href="https://sip.pragati.ac.in">link</a></p>
+            <p>Bring DLCO Class Test Notebook!! for CSE-B</p>
+            </ul>
+        </div>
+        <h2>Deadlines</h2>
+            <ul>
+                <p id="deadline1">
+                    Java Assignment: 8 August, 2024 
+                    <span class="countdown" id="countdown1"></span>
+                </p>
+                <!-- Add more deadlines as needed -->
+                <p id="deadline2">
+                    DLCO Assignment: 17 August, 2024 
+                    <span class="countdown" id="countdown2"></span>
+                </p>
+                <p id="deadline3">
+                    DLCO Assignment: 17 August, 2024 
+                    <span class="countdown" id="countdown3"></span>
+                </p>
+            </ul>
+        <script>
+            function updateCountdowns() {
+                const deadlines = {
+                    "countdown1": new Date("2024-08-08"), // Java Assignment
+                    "countdown2": new Date("2024-08-10"), // Java Assignment
+                    "countdown3": new Date("2024-08-17"),  // DLCO Assignment
+                };
+        
+                const today = new Date();
+                today.setHours(0, 0, 0, 0); // Set to start of the day
+        
+                for (const [id, deadlineDate] of Object.entries(deadlines)) {
+                    const timeDiff = deadlineDate - today;
+                    const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)); // Convert to days
+        
+                    // Update the HTML with the countdown
+                    const countdownElement = document.getElementById(id);
+                    if (daysLeft > 0) {
+                        countdownElement.textContent = ` [${daysLeft} days left]`;
+                    } else {
+                        countdownElement.textContent = ' [Deadline passed]';
+                    }
+                }
+            }
+        
+            // Run the function when the page loads
+            window.onload = updateCountdowns;
+        </script>
+    </section>
+
+    <div style="height: 50px;"></div> <!-- Spacer -->
+
+    <section id="resources">
+        <h2>Resources</h2>
+        <p>
+            <a href="#notes">Notes</a>
+            <a href="#assignments">Assignments</a>
+            <span>Records</span>
+            <span>Tests</span>
+        </p>
+
+        <section id="notes">
+            <h3>Notes</h3>
+            <a href="check.html">link for check</a>
+            <h4>Unit 1</h4>
+            <ul>
+                <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">DLCO UNIT 1</a> </li> <br>
+                <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">JAVA UNIT 1</a></li> <br>
+                <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">ADSA UNIT 1</a></li> <br>
+                <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">UHV UNIT 1</a></li> <br>
+                <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">MATHS UNIT 1</a> </li>
+                </ul>
+                <h4>Unit 2</h4>
+                <ul>
+                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">DLCO UNIT 2</a> </li> <br>
+                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">JAVA UNIT 2</a></li> <br>
+                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">ADSA UNIT 2</a></li> <br>
+                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">UHV UNIT 2</a></li> <br>
+                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">MATHS UNIT 2</a> </li>
+                    </ul>
+        </section>
+
+        <section id="assignments">
+            <h3>Assignments</h3>
+            <h4>Assignment 1</h4>
+            <ul>
+                <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">DLCO ASSIGNMENT 1</a> </li> <br>
+                <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">JAVA ASSIGNMENT 1</a></li> <br>
+                <li><a href="https://docs.google.com/documenASSIGNMENT1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">ADSA ASSIGNMENT 1</a></li> <br>
+                <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">UHV ASSIGNMENT 1</a></li> <br>
+                <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">MATHS ASSIGNMENT 1</a> </li>
+                </ul>
+
+                <h4>Assignments 2</h4>
+                <ul>
+                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">DLCO ASSIGNMENT 2</a> </li> <br>
+                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">JAVA ASSIGNMENT 2</a></li> <br>
+                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">ADSA ASSIGNMENT 2</a></li> <br>
+                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">UHV ASSIGNMENT 2</a></li> <br>
+                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">MATHS ASSIGNMENT 2</a> </li>
+                    </ul>
+        </section>
+
+
+        <ul>
+        <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">Year 2 Sem 1 Mid 1 [Maths] Paper</a> </li> <br>
+        <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">Year 2 Sem 1 Mid 1 [physics] Paper</a></li> <br>
+        <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">Year 2 Sem 1 Mid 1 [chemistry] Paper</a></li> <br>
+        <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">Year 2 Sem 1 Mid 1 [science] Paper</a></li> <br>
+        <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">Year 2 Sem 1 Mid 1 [english] Paper</a> </li>
+        </ul>
+    </section>
+
+    <div style="height: 50px;"></div> <!-- Spacer -->
+
+    <section id="archive">
+        <h2>Archive</h2>
+        <h3>Year 1 Sem 1
+            (<a href="#mid1">Mid 1</a>
+            <a href="#mid2">Mid 2</a>
+            <a href="#y1s1">Sem 1</a>)
+        </h3>
+        <h4 class="mid1">Mid 1</h4>
+        <ul>
+            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">LA&C</a> </li> <br>
+            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">ICP</a> </li> <br>
+            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">Chemistry</a> </li> <br>
+            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">BEEE</a> </li> <br>
+            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank"></a>EG</li> <br>
+        </ul>
+        <h4 class="mid2">Mid 2</h4>
+        <ul>
+            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">LA&C</a> </li> <br>
+            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">ICP</a> </li> <br>
+            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">Chemistry</a> </li> <br>
+            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">BEEE</a> </li> <br>
+            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank"></a>EG</li> <br>
+        </ul>
+        <h4 class="y1s1">Sem 1</h4>
+        <ul>
+            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">LA&C</a> </li> <br>
+            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">ICP</a> </li> <br>
+            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">Chemistry</a> </li> <br>
+            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">BEEE</a> </li> <br>
+            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank"></a>EG</li> <br>
+        </ul>
+    </section>
+
+    <div style="height: 50px;"></div> <!-- Spacer -->
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Yeswanth Madasu</p>
+        <p>2nd Year CSE-B</p>
+        <p>Phone No. 6969-696969</p>
+        <p>sinchan123v@gmail.com</p>
+    </section>
+
+    
+
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>Necessary</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#reminders">Reminders</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#archive">Archive</a></li>
+                        <!-- <li><a href="#contact">Contact</a></li> -->
+                        <!-- <li><a href="#accessibility">Website Accessibility</a></li> -->
+                    </ul>
+                </div>
+                <!-- <div class="footer-column" id="services_section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#web-design">Web Design</a></li>
+                        <li><a href="#wordpress">WordPress Websites</a></li>
+                        <li><a href="#branding">Branding</a></li>
+                        <li><a href="#packaging-design">Packaging Design</a></li>
+                        <li><a href="#graphic-design">Graphic Design</a></li>
+                        <li><a href="#real-estate-design">Real Estate Design</a></li>
+                    </ul>
+                </div> -->
+                <div class="footer-column" id="address_section">
+                    <h3>Address</h3>
+                    <address>
+                        Pragati Engineering College <br>
+                        1-378,<br>
+                        ADB Road, Surampalem,<br>
+                        Peddapuram district<br>
+                        <a href="https://pragati.ac.in" target="_blank">website</a>
+                    </address>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="https://www.instagram.com/__yeswanth9/" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/yeswanth-madasu-41525b297/" target="_blank">Linkedin</a></li>
+                        <li><a href="mailto:sinchan123v@gmail.com">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;2024 Yeswanth Madasu. All rights reserved.</p></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
