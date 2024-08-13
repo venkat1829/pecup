@@ -48,7 +48,7 @@
 }
 
 .nav-links li.large-gap {
-    padding: 15px;
+    padding: 20px;
     margin: 0 50px;
     font-family: monospace;
     font-size: 2rem;
@@ -61,7 +61,7 @@
 }
 
 /* Mobile View */
-@media (max-width: 768px) {
+@media (max-width: 946px) {
     .menu-toggle {
         display: block; /* Show button on mobile */
         width: 40px; /* Size adjustment */
