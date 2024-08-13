@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEC.UP</title>
+    <link rel="stylesheet" href="css/nav_styles.css">
     <link rel="stylesheet" href="css/styles.css">
     <!-- <script src="scripts/script.js"></script> -->
 
@@ -42,7 +43,7 @@
                 <li class="large-gap"><a href="#archive">&#128193 Archive</a></li>
             </ul>
         </div>
-    </nav>    
+    </nav>
 
 
     <section id="hero">
@@ -574,9 +575,17 @@
     </script>
 
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function () {
-            document.querySelector('.nav-links').classList.toggle('active');
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            menuToggle.addEventListener('click', function () {
+                navLinks.classList.toggle('active');
+                // For debugging purposes, log the button click
+                console.log('Menu button clicked');
+            });
         });
+
     </script>
 
 
