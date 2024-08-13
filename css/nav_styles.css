@@ -1,7 +1,8 @@
-
 /* Navbar */
 .navbar {
     background-color: #000;
+    /* color: black; */
+    /*set text color to white and select background to another color*/
     padding: 20px 20px;
     display: flex;
     align-items: center;
@@ -18,9 +19,10 @@
 .navbar .logo {
     color: #fff;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 40px; /* Increase font size */
+    padding-left: 90px; /*padding to left*/
+    font-weight: bold; 
 }
-
 .menu-toggle {
     background: none;
     border: none;
@@ -60,15 +62,24 @@
     font-size: 16px;
 }
 
+/* Hide LinkedIn button on desktop */
+.linkedin-button {
+    display: none; /* Hide by default */
+}
+
 /* Desktop Specific Styles */
 @media (min-width: 769px) {
     .nav-links {
         align-items: center;
-        gap: 100px; /* Space out links on desktop */
+        gap: 0px; /* Space out links on desktop */
     }
 
     .nav-links li {
         margin: 0; /* Remove margin for desktop */
+    }
+
+    .linkedin-button {
+        display: none; /* Ensure LinkedIn button is hidden on desktop */
     }
 }
 
@@ -85,13 +96,15 @@
         flex-direction: column;
         background-color: #000;
         position: absolute;
-        top: 50px;
+        top: 60px; /* Adjust based on your design */
         right: 0;
         width: 100%;
         text-align: center;
         transform: translateY(-100%); /* Start off-screen */
         opacity: 0; /* Start invisible */
         z-index: 1000;
+        padding: 0; /* Remove padding to prevent gaps */
+        box-sizing: border-box; /* Include padding and border in the element’s total width and height */
     }
 
     .nav-links.active {
@@ -100,6 +113,15 @@
     }
 
     .nav-links li {
-        margin: 10px 0;
+        margin: 10px 0; /* Adjust margin for mobile view */
+    }
+
+    .linkedin-button {
+        display: block; /* Show LinkedIn button on mobile */
+        background-color: #ff5733; /* Adjust color as needed */
+        border-radius: 30px;
+        padding: 10px 20px;
+        text-align: center;
+        margin-top: 10px; /* Space it out from other items */
     }
 }
