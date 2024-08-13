@@ -1,12 +1,11 @@
 /* Navbar */
 .navbar {
     background-color: #000;
-    /* color: black; */
-    /*set text color to white and select background to another color*/
     padding: 20px 20px;
     display: flex;
     align-items: center;
     position: relative;
+    z-index: 1000; /* Ensure navbar is above other content */
 }
 
 .navbar .container {
@@ -20,9 +19,10 @@
     color: #fff;
     text-decoration: none;
     font-size: 40px; /* Increase font size */
-    padding-left: 90px; /*padding to left*/
+    padding-left: 90px; /* Padding to the left */
     font-weight: bold; 
 }
+
 .menu-toggle {
     background: none;
     border: none;
@@ -30,19 +30,18 @@
     font-size: 24px;
     cursor: pointer;
     display: none; /* Hide by default for larger screens */
-    position: absolute;
-    top: 10px;
-    right: 10px;
     z-index: 1100; /* Higher z-index to ensure it's on top */
 }
 
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 1000; /* Ensure it's below the button */
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden; /* Hide overflow for smooth transition */
+    max-height: 0; /* Start with height of 0 */
 }
 
 .nav-links li {
@@ -71,7 +70,10 @@
 @media (min-width: 769px) {
     .nav-links {
         align-items: center;
-        gap: 0px; /* Space out links on desktop */
+        gap: 50px; /* Space out links on desktop */
+        max-height: none; /* Full height on desktop */
+        opacity: 1; /* Always visible on desktop */
+        overflow: visible; /* Ensure overflow is visible */
     }
 
     .nav-links li {
@@ -95,20 +97,13 @@
         display: flex;
         flex-direction: column;
         background-color: #000;
-        position: absolute;
-        top: 60px; /* Adjust based on your design */
-        right: 0;
-        width: 100%;
-        text-align: center;
-        transform: translateY(-100%); /* Start off-screen */
+        max-height: 0; /* Start with height of 0 */
         opacity: 0; /* Start invisible */
-        z-index: 1000;
-        padding: 0; /* Remove padding to prevent gaps */
-        box-sizing: border-box; /* Include padding and border in the element’s total width and height */
+        transition: max-height 0.3s ease, opacity 0.3s ease;
     }
 
     .nav-links.active {
-        transform: translateY(0); /* Slide into view */
+        max-height: 500px; /* Adjust based on your content's height */
         opacity: 1; /* Fade in */
     }
 
