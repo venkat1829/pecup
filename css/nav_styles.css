@@ -1,7 +1,7 @@
 /* Navbar */
 .navbar {
     background-color: #000;
-    padding: 20px 20px;
+    padding: 20px;
     display: flex;
     align-items: center;
     position: relative;
@@ -19,10 +19,11 @@
     color: #fff;
     text-decoration: none;
     font-size: 40px; /* Increase font size */
-    padding-left: 90px; /* Padding to the left */
+    padding-left: 20px; /* Adjusted padding for better responsiveness */
     font-weight: bold; 
 }
 
+/* Menu Toggle Button */
 .menu-toggle {
     background: none;
     border: none;
@@ -45,14 +46,14 @@
 }
 
 .nav-links li {
-    margin: 0 10px;
+    margin: 0 15px; /* Adjust margin for better spacing */
 }
 
 .nav-links li.large-gap {
     padding: 20px;
-    margin: 0 50px;
+    margin: 0 20px; /* Adjusted margin for better spacing */
     font-family: monospace;
-    font-size: 2rem;
+    font-size: 1.5rem; /* Adjust font size for responsiveness */
 }
 
 .nav-links a {
@@ -61,13 +62,17 @@
     font-size: 16px;
 }
 
-/* Hide LinkedIn button on desktop */
+/* LinkedIn Button */
 .linkedin-button {
     display: none; /* Hide by default */
 }
 
 /* Desktop Specific Styles */
 @media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Hide menu toggle on desktop */
+    }
+
     .nav-links {
         align-items: center;
         gap: 50px; /* Space out links on desktop */
@@ -85,10 +90,10 @@
     }
 }
 
-/* Mobile View */
-@media (max-width: 946px) {
+/* Tablet and Small Desktop View */
+@media (max-width: 1024px) {
     .menu-toggle {
-        display: block; /* Show button on mobile */
+        display: block; /* Show button on tablets and smaller desktops */
         width: 40px; /* Size adjustment */
         height: 40px; /* Size adjustment */
     }
@@ -97,14 +102,21 @@
         display: flex;
         flex-direction: column;
         background-color: #000;
-        max-height: 0; /* Start with height of 0 */
+        position: absolute;
+        top: 60px; /* Adjust based on your design */
+        right: 0;
+        width: 100%;
+        text-align: center;
+        transform: translateY(-100%); /* Start off-screen */
         opacity: 0; /* Start invisible */
         transition: max-height 0.3s ease, opacity 0.3s ease;
+        max-height: 0; /* Ensure it's hidden initially */
     }
 
     .nav-links.active {
-        max-height: 500px; /* Adjust based on your content's height */
+        transform: translateY(0); /* Slide into view */
         opacity: 1; /* Fade in */
+        max-height: 500px; /* Adjust based on your content's height */
     }
 
     .nav-links li {
@@ -118,5 +130,26 @@
         padding: 10px 20px;
         text-align: center;
         margin-top: 10px; /* Space it out from other items */
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .navbar .logo {
+        font-size: 30px; /* Reduce logo size for smaller screens */
+        padding-left: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .menu-toggle {
+        font-size: 28px; /* Adjust size for better visibility */
+    }
+
+    .nav-links li.large-gap {
+        padding: 15px; /* Adjust padding for smaller screens */
+        font-size: 1.25rem; /* Adjust font size for responsiveness */
     }
 }
