@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEC.UP</title>
-    <link rel="stylesheet" href="css/styles2.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Favicon for different sizes -->
@@ -18,37 +19,40 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQ8G7RBY0H"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-MQ8G7RBY0H');
+        gtag('config', 'G-MQ8G7RBY0H');
     </script>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">PEC.UP</a>
+            <a href="#" class="logo" id="pecup">PEC.UP</a>
             <ul class="nav-links">
-                <li class="large-gap"><a href="#home">Home</a></li>
-                <li class="large-gap"><a href="#reminders">Reminders</a></li>
-                <li class="large-gap"><a href="#resources">Resources</a></li>
-                <li class="large-gap"><a href="#archive">Archive</a></li>
+                <li class="large-gap"><a href="#top">&#8962 Home</a></li>
+                <li class="large-gap"><a href="#reminders">&#128197 Reminders</a></li>
+                <li class="large-gap"><a href="#resources">&#128221 Resources</a></li>
+                <li class="large-gap"><a href="#archive">&#128193 Archive</a></li>
             </ul>
-            <!-- <a href="https://www.linkedin.com/in/yeswanth-madasu-41525b297/" class="btn-contact">linkedin</a> -->
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                &#9776; <!-- Hamburger icon -->
+            </button>
         </div>
     </nav>
 
     <section id="hero">
-        <div class="hero-content">
-            <h1><span class="bored">Bored</span>
-                <span class="with">with</span>
-                <span class="with"> studies?</span> 
-                <span class="not">Not</span>
-                <span class="anymore"> anymore!</span> </h1>
-            <p>pickup by 
-                <span class="pickup">PEC.UP</span> </p>
+        <div class="hero-content text-container">
+            <div class="animated-text">
+                <h1 id="typing-heading"></h1>
+            </div>
             <a href="#resources" class="btn-project">resources?</a>
+
+            <p class="centered-text">pickup by
+                <span class="pickup">PEC.UP</span>
+            </p>
         </div>
     </section>
 
@@ -59,64 +63,73 @@
     </section> -->
 
     <section id="home">
-        <h2>Home</h2>
-        <p>Welcome to our website, where we provide a range of useful study resources to support your academic journey.</p>
+        <h2>Home</a></h2>
+        <p>Welcome to our website, where we provide a range of useful study resources to support your academic journey.
+        </p>
 
-        <p>We offer previous year question papers for various examinations, including mid-semester exams (Mid-1, Mid-2), regular semester exams, and supplementary exams under the R23 regulations.</p>
+        <p>We offer previous year question papers for various examinations, including mid-semester exams (Mid-1, Mid-2),
+            regular semester exams under the R23 regulations.</p>
+
+        <a href="https://drive.google.com/file/d/14OIpuf3vNxc44AQEfl8dhJjC1bOSWggi/view?usp=sharing" target="_blank">
+            &rArr; Syllabus</a>
+        <a href="https://drive.google.com/file/d/14gvhgwBn9uVNwKUJznPH0AH7HvqaQzjs/view?usp=sharing" target="_blank">
+            &rArr; Timetable</a>
 
         <p>Our offerings include:</p>
         <ul>
-                <li><strong>Previous Year Question Papers:</strong> Mid-1, Mid-2 exams, regular semester exams, and supplementary exams (R23 regulations).</li>
-                <li><strong>Study Materials:</strong> Comprehensive notes and guides.</li>
-                <li><strong>Assignment Questions with Answers:</strong> Assignments from various subjects, with solutions when available.</li>
-                <li><strong>Record Manuals:</strong> Lab records and practical manuals.</li>
+            <li><strong>Previous Year Question Papers:</strong> Mid-1, Mid-2 exams, regular semester exams, and
+                supplementary exams (R23 regulations).</li>
+            <li><strong>Study Materials:</strong> Comprehensive notes and guides.</li>
+            <li><strong>Assignment Questions with Answers:</strong> Assignments from various subjects, with solutions
+                when available.</li>
+            <li><strong>Record Manuals:</strong> Lab records and practical manuals.</li>
         </ul>
 
         <p>Our resources are well-organized to help you find what you need efficiently.</p>
-        
+
     </section>
 
-    <div style="height: 50px;"></div> <!-- Spacer -->
+    <div style="height: 20px;"></div> <!-- Spacer -->
 
     <section id="reminders">
         <h2>Reminders</h2>
         <div id="reminder-text">
             <ul>
-            <p>Results are Uploaded!! <a href="https://sip.pragati.ac.in">link</a></p>
-            <p>Bring DLCO Class Test Notebook!! for CSE-B</p>
+                <p>Results are Uploaded!! <a href="https://sip.pragati.ac.in">link</a></p>
+                <p>Bring DLCO Class Test Notebook!! for CSE-B</p>
             </ul>
         </div>
         <h2>Deadlines</h2>
-            <ul>
-                <p id="deadline1">
-                    Java Assignment: 8 August, 2024 
-                    <span class="countdown" id="countdown1"></span>
-                </p>
-                <!-- Add more deadlines as needed -->
-                <p id="deadline2">
-                    DLCO Assignment: 17 August, 2024 
-                    <span class="countdown" id="countdown2"></span>
-                </p>
-                <p id="deadline3">
-                    DLCO Assignment: 17 August, 2024 
-                    <span class="countdown" id="countdown3"></span>
-                </p>
-            </ul>
+        <ul>
+            <p id="deadline1">
+                Java Assignment 2: 14 August, 2024
+                <span class="countdown" id="countdown1"></span>
+            </p>
+            <!-- Add more deadlines as needed -->
+            <p id="deadline2">
+                DLCO Assignment 2: 15 August, 2024
+                <span class="countdown" id="countdown2"></span>
+            </p>
+            <p id="deadline3">
+                DLCO Assignment 3: 20 August, 2024
+                <span class="countdown" id="countdown3"></span>
+            </p>
+        </ul>
         <script>
             function updateCountdowns() {
                 const deadlines = {
-                    "countdown1": new Date("2024-08-08"), // Java Assignment
-                    "countdown2": new Date("2024-08-10"), // Java Assignment
-                    "countdown3": new Date("2024-08-17"),  // DLCO Assignment
+                    "countdown1": new Date("2024-08-14"), // Java Assignment
+                    "countdown2": new Date("2024-08-15"), // DLCO Assignment
+                    "countdown3": new Date("2024-08-20"),  // DLCO Assignment
                 };
-        
+
                 const today = new Date();
                 today.setHours(0, 0, 0, 0); // Set to start of the day
-        
+
                 for (const [id, deadlineDate] of Object.entries(deadlines)) {
                     const timeDiff = deadlineDate - today;
                     const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)); // Convert to days
-        
+
                     // Update the HTML with the countdown
                     const countdownElement = document.getElementById(id);
                     if (daysLeft > 0) {
@@ -126,121 +139,371 @@
                     }
                 }
             }
-        
+
             // Run the function when the page loads
             window.onload = updateCountdowns;
         </script>
     </section>
 
-    <div style="height: 50px;"></div> <!-- Spacer -->
+    <div style="height: 20px;"></div> <!-- Spacer -->
 
     <section id="resources">
-        <h2>Resources</h2>
-        <p>
-            <a href="#notes">Notes</a>
-            <a href="#assignments">Assignments</a>
-            <span>Records</span>
-            <span>Tests</span>
-        </p>
-
-        <section id="notes">
-            <h3>Notes</h3>
-            <a href="check.html">link for check</a>
-            <h4>Unit 1</h4>
-            <ul>
-                <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">DLCO UNIT 1</a> </li> <br>
-                <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">JAVA UNIT 1</a></li> <br>
-                <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">ADSA UNIT 1</a></li> <br>
-                <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">UHV UNIT 1</a></li> <br>
-                <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">MATHS UNIT 1</a> </li>
-                </ul>
-                <h4>Unit 2</h4>
+        <h1>Resources</h1>
+        <div>
+            <p>
+                <a href="#notes">Notes</a>
+                <a href="#assignments">Assignments</a>
+                <a href="#tests">Tests</a>
+                <a href="#records">Records</a>
+            </p>
+        </div>
+        <div class="resources-container">
+            <div class="resources-column">
+                <h2 id="notes">Notes
+                    <span><a href="#resources">!</a></span>
+                </h2>
+                <h3>Unit 1</h3>
                 <ul>
-                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">DLCO UNIT 2</a> </li> <br>
-                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">JAVA UNIT 2</a></li> <br>
-                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">ADSA UNIT 2</a></li> <br>
-                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">UHV UNIT 2</a></li> <br>
-                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">MATHS UNIT 2</a> </li>
-                    </ul>
-        </section>
-
-        <section id="assignments">
-            <h3>Assignments</h3>
-            <h4>Assignment 1</h4>
-            <ul>
-                <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">DLCO ASSIGNMENT 1</a> </li> <br>
-                <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">JAVA ASSIGNMENT 1</a></li> <br>
-                <li><a href="https://docs.google.com/documenASSIGNMENT1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">ADSA ASSIGNMENT 1</a></li> <br>
-                <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">UHV ASSIGNMENT 1</a></li> <br>
-                <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">MATHS ASSIGNMENT 1</a> </li>
+                    <!-- <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">DM/GT</a></li> -->
+                    <li><a href="https://drive.google.com/file/d/130MKouxcby66c2HBTM422Yez11jWJyiJ/view?usp=sharing"
+                            target="_blank">ADS</a></li>
+                    <!-- <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">Java</a></li> -->
+                    <!-- <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">DLCO</a></li> -->
+                    <li><a href="https://drive.google.com/file/d/12Pc54j_bBcYH6K-GAqdYuGNHWMrsTxgI/view?usp=sharing"
+                            target="_blank">UHV</a></li>
+                    <br>
                 </ul>
-
-                <h4>Assignments 2</h4>
+                <!-- <h3>Unit 2</h3>
                 <ul>
-                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">DLCO ASSIGNMENT 2</a> </li> <br>
-                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">JAVA ASSIGNMENT 2</a></li> <br>
-                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">ADSA ASSIGNMENT 2</a></li> <br>
-                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">UHV ASSIGNMENT 2</a></li> <br>
-                    <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">MATHS ASSIGNMENT 2</a> </li>
-                    </ul>
-        </section>
-
-
-        <ul>
-        <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">Year 2 Sem 1 Mid 1 [Maths] Paper</a> </li> <br>
-        <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">Year 2 Sem 1 Mid 1 [physics] Paper</a></li> <br>
-        <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">Year 2 Sem 1 Mid 1 [chemistry] Paper</a></li> <br>
-        <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">Year 2 Sem 1 Mid 1 [science] Paper</a></li> <br>
-        <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">Year 2 Sem 1 Mid 1 [english] Paper</a> </li>
-        </ul>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">LA&C</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">ICP</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">Chemistry</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">BEEE</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">EG</a></li>
+                    <br>
+                </ul> -->
+                <!-- <h3>Unit 3</h3>
+                <ul>
+                    <li>LA&C</li>
+                    <li>ICP</li>
+                    <li>Chemistry</li>
+                    <li>BEEE</li>
+                    <li>EG</li>
+                    <br>
+                </ul>
+                <h3>Unit 4</h3>
+                <ul>
+                    <li>LA&C</li>
+                    <li>ICP</li>
+                    <li>Chemistry</li>
+                    <li>BEEE</li>
+                    <li>EG</li>
+                    <br>
+                </ul> -->
+            </div>
+            <div class="resources-column">
+                <h2 id="assignments">Assignments
+                    <span><a href="#resources">!</a></span>
+                </h2>
+                <h3>Assignment 1</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/11m5oM2Ukwzf7m8Z5sQV6Fass89vHlaPy/view?usp=sharing"
+                            target="_blank">DMGT</a></li>
+                    <li><a href="https://drive.google.com/file/d/11_6UneR9rA8n3iWK5TtUEkrJbh75u1I-/view?usp=sharing"
+                            target="_blank">ADS</a></li>
+                    <li><a href="https://drive.google.com/file/d/16Ul7m0grIGZTVjj7KGq7-_DK7KCu7sTB/view?usp=sharing"
+                            target="_blank">Java</a></li>
+                    <li><a href="https://drive.google.com/file/d/11kC6-Djg3hAjdXzJqI2Py7uwFP6n6ylK/view?usp=sharing"
+                            target="_blank">DLCO</a></li>
+                    <li><a href="https://drive.google.com/file/d/127ddB5e2EJwZvqEGcJDAaLoQcKAsQIvw/view?usp=sharing"
+                            target="_blank">UHV</a></li>
+                    <br>
+                </ul>
+                <!-- <h3>Assignment 2</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">DM/GT</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">ADS</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">Java</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">DLCO</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">UHV</a><DM&GT>
+                    <br>
+                </ul> -->
+                <!-- <h3>Assignment 3</h3>
+                <ul>
+                    <li>LA&C</li>
+                    <li>ICP</li>
+                    <li>Chemistry</li>
+                    <li>BEEE</li>
+                    <li>EG</li>
+                    <br>
+                </ul>
+                <h3>Assignment 4</h3>
+                <ul>
+                    <li>LA&C</li>
+                    <li>ICP</li>
+                    <li>Chemistry</li>
+                    <li>BEEE</li>
+                    <li>EG</li>
+                    <br>
+                </ul> -->
+            </div>
+            <div class="resources-column">
+                <h2 id="tests">Class Tests
+                    <span><a href="#resources">!</a></span>
+                </h2>
+                <h3>Test 1</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/14ToWdsMKc-_-YnRqdi2JFggF9D0Q2uGW/view?usp=sharing"
+                            target="_blank">DMGT</a></li>
+                    <!-- <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">ADS</a></li> -->
+                    <!-- <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">Java</a></li> -->
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing"
+                            target="_blank">DLCO</a></li>
+                    <!-- <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">UHV</a></li> -->
+                    <br>
+                </ul>
+                <!-- <h3>Test 2</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">DM/GT</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">ADS</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">Java</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">DLCO</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">UHV</a></li>
+                    <br>
+                </ul> -->
+                <!-- <h3>Test 3</h3>
+                <ul>
+                    <li>LA&C</li>
+                    <li>ICP</li>
+                    <li>Chemistry</li>
+                    <li>BEEE</li>
+                    <li>EG</li>
+                    <br>
+                <h3>Test 4</h3>
+                    <ul>
+                        <li>LA&C</li>
+                        <li>ICP</li>
+                        <li>Chemistry</li>
+                        <li>BEEE</li>
+                        <li>EG</li>
+                        <br>
+                    </ul> -->
+            </div>
+            <div class="resources-column">
+                <h2 id="records">Records
+                    <span><a href="#resources">!</a></span>
+                </h2>
+                <h3>Week 1-3</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/13A9Zai6ClRzWgYwLN-dwWdqxLEvzmo33/view?usp=sharing"
+                            target="_blank">Python</a></li>
+                    <li><a href="https://drive.google.com/file/d/13CLlJIH4w17YX-4RM8RinmF_snnGqimx/view?usp=sharing"
+                            target="_blank">Java</a></li>
+                    <li><a href="https://drive.google.com/file/d/13CLlJIH4w17YX-4RM8RinmF_snnGqimx/view?usp=sharing"
+                            target="_blank">ADS</a></li>
+                    <br>
+                </ul>
+                <!-- <h3>Week 2</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">Python</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">Java</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">Adsa</a></li>
+                    <br>
+                </ul>
+                <h3>Week 3</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">Python</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">Java</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">Adsa</a></li>
+                    <br>
+                </ul> -->
+            </div>
+        </div>
     </section>
 
-    <div style="height: 50px;"></div> <!-- Spacer -->
+    <div style="height: 20px;"></div> <!-- Spacer -->
 
     <section id="archive">
-        <h2>Archive</h2>
-        <h3>Year 1 Sem 1
-            (<a href="#mid1">Mid 1</a>
-            <a href="#mid2">Mid 2</a>
-            <a href="#y1s1">Sem 1</a>)
-        </h3>
-        <h4 class="mid1">Mid 1</h4>
-        <ul>
-            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">LA&C</a> </li> <br>
-            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">ICP</a> </li> <br>
-            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">Chemistry</a> </li> <br>
-            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">BEEE</a> </li> <br>
-            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank"></a>EG</li> <br>
-        </ul>
-        <h4 class="mid2">Mid 2</h4>
-        <ul>
-            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">LA&C</a> </li> <br>
-            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">ICP</a> </li> <br>
-            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">Chemistry</a> </li> <br>
-            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">BEEE</a> </li> <br>
-            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank"></a>EG</li> <br>
-        </ul>
-        <h4 class="y1s1">Sem 1</h4>
-        <ul>
-            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">LA&C</a> </li> <br>
-            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">ICP</a> </li> <br>
-            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">Chemistry</a> </li> <br>
-            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank">BEEE</a> </li> <br>
-            <li><a href="https://docs.google.com/document/d/1Omjh3EHqCl34k5VGO0Eoq_W5wdQTzNTGjp1ALSoqHCc/edit?usp=share_link" target="_blank"></a>EG</li> <br>
-        </ul>
+        <h1>Archive</h1>
+        <div class="archive-container">
+            <div class="archive-column">
+                <h2>Year 1 Sem 1</h2>
+                <h3>Mid 1</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1UQClxGFsJh5j8_YUx-KU_XrfAOWi2CRy/view?usp=sharing"
+                            target="_blank">LA&C</a></li>
+                    <li><a href="https://drive.google.com/file/d/1gTuubrednzSOOjToqgeRcSZBxtQ43Cvz/view?usp=sharing"
+                            target="_blank">ICP</a></li>
+                    <li><a href="https://drive.google.com/file/d/13zKxCEmzhiivwhIbfdnoxIK9I3WqyE77/view?usp=sharing"
+                            target="_blank">PHY</a></li>
+                    <li><a href="https://drive.google.com/file/d/13tdQkbwxZLICDFWgDSxICAkp2EARdVj_/view?usp=sharing"
+                            target="_blank">BEEE</a></li>
+                    <li><a href="https://drive.google.com/file/d/13V2anDlBLRUc98ou_S20w3SspLameU0o/view?usp=sharing"
+                            target="_blank">EG</a></li>
+                    <br>
+                </ul>
+                <h3>Mid 2</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1XOiarb4P_Gd1ShvrxQzFVrWrXEGZF4Fy/view?usp=sharing"
+                            target="_blank">LA&C</a></li>
+                    <li><a href="https://drive.google.com/file/d/1WtNgyTaiRo6eKiLMc3u9xDEgGsqvUWZU/view?usp=sharing"
+                            target="_blank">ICP</a></li>
+                    <!-- <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">PHY</a></li> -->
+                    <!-- <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">BEEE</a></li> -->
+                    <li><a href="https://drive.google.com/file/d/13Wav1A4-9xiRY15FXZ-zRJlLLudrg9Zk/view?usp=sharing"
+                            target="_blank">EG</a></li>
+                    <br>
+                </ul>
+                <h3>Sem 1</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1smN6zp2hpiUdRDwgthXijx58STJACauU/view?usp=sharing"
+                            target="_blank">LA&C</a></li>
+                    <li><a href="https://drive.google.com/file/d/1ZxNkfShkb651hLu2GDwpliW53ZrMv0Cu/view?usp=sharing"
+                            target="_blank">ICP</a></li>
+                    <li><a href="https://drive.google.com/file/d/13pqoFbB84BSDe4ON8dYZ1ihFDTGjp1dz/view?usp=sharing"
+                            target="_blank">PHY</a></li>
+                    <li><a href="https://drive.google.com/file/d/13flD3c2QNNTu5Dcwf6mWUpov8aqXyXFJ/view?usp=sharing"
+                            target="_blank">BEEE</a></li>
+                    <li><a href="https://drive.google.com/file/d/13hfEUwzFYgPI5E_sZaEsHfUO3p1b-1zw/view?usp=sharing"
+                            target="_blank">EG</a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="archive-column">
+                <h2>Year 1 Sem 2</h2>
+                <h3>Mid 1</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1wDIE5-0Roxb9siQLmItCHcfJcvmvDT9y/view?usp=sharing"
+                            target="_blank">DEVC</a></li>
+                    <li><a href="https://drive.google.com/file/d/1FeIsK5PyQmafgCu1wg12-opg9NW7zwe2/view?usp=sharingx"
+                            target="_blank">DS</a></li>
+                    <li><a href="https://drive.google.com/file/d/1B8eGNdmFwSyL3qHFLO8BhZDdxi64pxlI/view?usp=sharing"
+                            target="_blank">CHEM</a></li>
+                    <li><a href="https://drive.google.com/file/d/1RVg8TRdv_ryIRsTMg7qB089yjj3vtFz6/view?usp=sharing"
+                            target="_blank">BCME</a></li>
+                    <li><a href="https://drive.google.com/file/d/1DnkGoLb6a49NsC1owujUa8ADEQx7DFV9/view?usp=sharing"
+                            target="_blank">CE</a></li>
+                    <br>
+                </ul>
+                <h3>Mid 2</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/13hgJcbn9XPI_aVYCSbHRpcppCuug1rXg/view?usp=sharing"
+                            target="_blank">DEVC</a></li>
+                    <li><a href="https://drive.google.com/file/d/13vSCJ32wI6nwA_wcHQMZMMVOGfpTT48p/view?usp=sharing"
+                            target="_blank">DS</a></li>
+                    <li><a href="https://drive.google.com/file/d/11qkU3B6EF8X4-jQ7ySVNrHXwTyATtoI_/view?usp=sharing"
+                            target="_blank">CHEM</a></li>
+                    <li><a href="https://drive.google.com/file/d/1V0i8EQedxBogMLIRdA9leEsMZBcgbNE8/view?usp=sharing"
+                            target="_blank">BCME</a></li>
+                    <li><a href="https://drive.google.com/file/d/141eVMuvU1Nm2txzliH9rT98tDPRjs2vp/view?usp=sharing"
+                            target="_blank">CE</a></li>
+                    <br>
+                </ul>
+                <h3>Sem 2</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1ZuoW6QBRHbtO5hFWpW1xMG2QdCs-XJO3/view?usp=sharing"
+                            target="_blank">DEVC</a></li>
+                    <li><a href="https://drive.google.com/file/d/1R_lLX_MUTfRlbq-9rruk2kxLCv-5cHW5/view?usp=sharing"
+                            target="_blank">DS</a></li>
+                    <li><a href="https://drive.google.com/file/d/14Xf3BhlCWvB1vayqPWD5aul3tQYKRhKw/view?usp=sharing"
+                            target="_blank">CHEM</a></li>
+                    <li><a href="https://drive.google.com/file/d/1REPtkzY1BsibXQyE8m_73R-IB5S3PtmC/view?usp=sharing"
+                            target="_blank">BCME</a></li>
+                    <li><a href="https://drive.google.com/file/d/1N9KojCq8YzebZg9FEhnNU2BmaftRJDgv/view?usp=sharing"
+                            target="_blank">CE</a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="archive-column">
+                <!-- <h2>Year 2 Sem 1</h2>
+                <h3>Mid 1</h3>
+                <ul>
+                    <li>LA&C</li>
+                    <li>ICP</li>
+                    <li>Chemistry</li>
+                    <li>BEEE</li>
+                    <li>EG</li>
+                    <br>
+                </ul>
+                <h3>Mid 2</h3>
+                <ul>
+                    <li>LA&C</li>
+                    <li>ICP</li>
+                    <li>Chemistry</li>
+                    <li>BEEE</li>
+                    <li>EG</li>
+                    <br>
+                </ul>
+                <h3>Sem 1</h3>
+                <ul>
+                    <li>LA&C</li>
+                    <li>ICP</li>
+                    <li>Chemistry</li>
+                    <li>BEEE</li>
+                    <li>EG</li>
+                    <br>
+                </ul> -->
+            </div>
+            <div class="archive-column">
+                <!-- <h2>Year 2 Sem 2</h2>
+                <h3>Mid 1</h3>
+                <ul>
+                    <li>LA&C</li>
+                    <li>ICP</li>
+                    <li>Chemistry</li>
+                    <li>BEEE</li>
+                    <li>EG</li>
+                    <br>
+                </ul>
+                <h3>Mid 2</h3>
+                <ul>
+                    <li>LA&C</li>
+                    <li>ICP</li>
+                    <li>Chemistry</li>
+                    <li>BEEE</li>
+                    <li>EG</li>
+                    <br>
+                </ul>
+                <h3>Sem 2</h3>
+                <ul>
+                    <li>LA&C</li>
+                    <li>ICP</li>
+                    <li>Chemistry</li>
+                    <li>BEEE</li>
+                    <li>EG</li>
+                    <br>
+                </ul> -->
+            </div>
+        </div>
     </section>
 
-    <div style="height: 50px;"></div> <!-- Spacer -->
+    <div style="height: 20px;"></div> <!-- Spacer -->
 
     <section id="contact">
         <h2>Contact</h2>
         <p>Yeswanth Madasu</p>
         <p>2nd Year CSE-B</p>
         <p>Phone No. 6969-696969</p>
-        <p>sinchan123v@gmail.com</p>
+        <p>work.pecup@gmail.com</p>
+        <a href="https://wa.me/919676242565" target="_blank">Request Resources</a>
     </section>
 
-    
+    <div class="overlay-container">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="overlay-button">
+            <img src="images/dots.gif" alt="Home" class="menu-icon" />
+        </label>
+
+        <div class="menu">
+            <!-- <a href="#home"><p class="menu-icon">&#8962</p></a> -->
+            <a href="#top"><img src="images/home.gif" alt="Home" class="menu-icon" /></a>
+            <a href="#reminders"><img src="images/reminders.png" alt="Reminders" class="menu-icon" /></a>
+            <a href="#resources"><img src="images/document.png" alt="Resources" class="menu-icon" /></a>
+            <a href="#archive"><img src="images/folder.png" alt="Archive" class="menu-icon" /></a>
+        </div>
+    </div>
+
+
 
     <footer>
         <div class="container">
@@ -252,21 +515,8 @@
                         <li><a href="#reminders">Reminders</a></li>
                         <li><a href="#resources">Resources</a></li>
                         <li><a href="#archive">Archive</a></li>
-                        <!-- <li><a href="#contact">Contact</a></li> -->
-                        <!-- <li><a href="#accessibility">Website Accessibility</a></li> -->
                     </ul>
                 </div>
-                <!-- <div class="footer-column" id="services_section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#web-design">Web Design</a></li>
-                        <li><a href="#wordpress">WordPress Websites</a></li>
-                        <li><a href="#branding">Branding</a></li>
-                        <li><a href="#packaging-design">Packaging Design</a></li>
-                        <li><a href="#graphic-design">Graphic Design</a></li>
-                        <li><a href="#real-estate-design">Real Estate Design</a></li>
-                    </ul>
-                </div> -->
                 <div class="footer-column" id="address_section">
                     <h3>Address</h3>
                     <address>
@@ -282,17 +532,50 @@
                     <ul>
                         <li><a href="#contact">Contact</a></li>
                         <li><a href="https://www.instagram.com/__yeswanth9/" target="_blank">Instagram</a></li>
-                        <li><a href="https://www.linkedin.com/in/yeswanth-madasu-41525b297/" target="_blank">Linkedin</a></li>
+                        <li><a href="https://www.linkedin.com/in/yeswanth-madasu-41525b297/"
+                                target="_blank">Linkedin</a></li>
                         <li><a href="mailto:sinchan123v@gmail.com">Email</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy;2024 Yeswanth Madasu. All rights reserved.</p></p>
+                <p>&copy;2024 Yeswanth Madasu. All rights reserved.</p>
+                </p>
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
+
+    <script>
+        const texts = ["Bored with studies? Not anymore!", "for you and us!", "resources that are actually useful"];
+        let count = 0;
+        let index = 0;
+        let currentText = '';
+        let letter = '';
+
+        (function type() {
+            if (count === texts.length) {
+                count = 0;
+            }
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+
+            document.getElementById('typing-heading').textContent = letter;
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+                setTimeout(type, 2000); // Pause before typing the next word
+            } else {
+                setTimeout(type, 150);
+            }
+        })();
+    </script>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>
