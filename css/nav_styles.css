@@ -60,6 +60,18 @@
     font-size: 16px;
 }
 
+/* Desktop Specific Styles */
+@media (min-width: 769px) {
+    .nav-links {
+        align-items: center;
+        gap: 100px; /* Space out links on desktop */
+    }
+
+    .nav-links li {
+        margin: 0; /* Remove margin for desktop */
+    }
+}
+
 /* Mobile View */
 @media (max-width: 946px) {
     .menu-toggle {
