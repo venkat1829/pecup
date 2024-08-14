@@ -19,7 +19,7 @@
     color: #fff;
     text-decoration: none;
     font-size: 40px; /* Increase font size */
-    padding-left: 90px; /* Padding to the left */
+    padding-left: 20px; /* Padding to the left */
     font-weight: bold; 
 }
 
@@ -29,6 +29,7 @@
     color: #fff;
     font-size: 24px;
     cursor: pointer;
+    margin-left: auto;
     display: none; /* Hide by default for larger screens */
     z-index: 1100; /* Higher z-index to ensure it's on top */
 }
@@ -50,7 +51,7 @@
 
 .nav-links li.large-gap {
     padding: 20px;
-    margin: 0 50px;
+    margin: 0 20px;
     font-family: monospace;
     font-size: 2rem;
 }
@@ -70,7 +71,7 @@
 @media (min-width: 769px) {
     .nav-links {
         align-items: center;
-        gap: 50px; /* Space out links on desktop */
+        gap: 10px; /* Space out links on desktop */
         max-height: none; /* Full height on desktop */
         opacity: 1; /* Always visible on desktop */
         overflow: visible; /* Ensure overflow is visible */
