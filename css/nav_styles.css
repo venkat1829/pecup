@@ -1,0 +1,122 @@
+/* Navbar */
+.navbar {
+    background-color: #000;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar .logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 40px; /* Increase font size */
+    padding-left: 90px; /* Padding to the left */
+    font-weight: bold; 
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Hide by default for larger screens */
+    z-index: 1100; /* Higher z-index to ensure it's on top */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden; /* Hide overflow for smooth transition */
+    max-height: 0; /* Start with height of 0 */
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links li.large-gap {
+    padding: 20px;
+    margin: 0 50px;
+    font-family: monospace;
+    font-size: 2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hide LinkedIn button on desktop */
+.linkedin-button {
+    display: none; /* Hide by default */
+}
+
+/* Desktop Specific Styles */
+@media (min-width: 769px) {
+    .nav-links {
+        align-items: center;
+        gap: 50px; /* Space out links on desktop */
+        max-height: none; /* Full height on desktop */
+        opacity: 1; /* Always visible on desktop */
+        overflow: visible; /* Ensure overflow is visible */
+    }
+
+    .nav-links li {
+        margin: 0; /* Remove margin for desktop */
+    }
+
+    .linkedin-button {
+        display: none; /* Ensure LinkedIn button is hidden on desktop */
+    }
+}
+
+/* Mobile View */
+@media (max-width: 946px) {
+    .menu-toggle {
+        display: block; /* Show button on mobile */
+        width: 40px; /* Size adjustment */
+        height: 40px; /* Size adjustment */
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        background-color: #000;
+        max-height: 0; /* Start with height of 0 */
+        opacity: 0; /* Start invisible */
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+
+    .nav-links.active {
+        max-height: 500px; /* Adjust based on your content's height */
+        opacity: 1; /* Fade in */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Adjust margin for mobile view */
+    }
+
+    .linkedin-button {
+        display: block; /* Show LinkedIn button on mobile */
+        background-color: #ff5733; /* Adjust color as needed */
+        border-radius: 30px;
+        padding: 10px 20px;
+        text-align: center;
+        margin-top: 10px; /* Space it out from other items */
+    }
+}
