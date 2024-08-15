@@ -1,0 +1,29 @@
+/* Basic styling for the scrolling text container */
+.scrolling-text {
+    background-color: #f0f0f0; /* Background color (optional) */
+    padding: 10px; /* Padding around the text */
+    overflow: hidden; /* Hide overflowed content */
+    position: relative; /* For absolute positioning of text */
+    height: 30px; /* Adjust height as needed */
+    line-height: 40px; /* Center text vertically */
+    border-bottom: 1px solid #ddd; /* Optional border */
+}
+
+/* Styling for the scrolling text */
+.scrolling-text p {
+    position: absolute;
+    white-space: nowrap; /* Prevent line breaks */
+    animation: scroll-left 20s linear infinite; /* Slower animation */
+    margin: 0; /* Remove default margins */
+    padding-left: 0; /* Start position off-screen */
+}
+
+/* Keyframes for the scrolling effect */
+@keyframes scroll-left {
+    from {
+        transform: translateX(100%); /* Start off-screen on the right */
+    }
+    to {
+        transform: translateX(-100%); /* End off-screen on the left */
+    }
+}
