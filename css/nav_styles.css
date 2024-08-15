@@ -71,7 +71,8 @@
 @media (min-width: 769px) {
     .nav-links {
         align-items: center;
-        gap: 10px; /* Space out links on desktop */
+        gap: 50px; /* Space out links on desktop */
+        padding-right: 20px;
         max-height: none; /* Full height on desktop */
         opacity: 1; /* Always visible on desktop */
         overflow: visible; /* Ensure overflow is visible */
@@ -87,7 +88,7 @@
 }
 
 /* Mobile View */
-@media (max-width: 946px) {
+@media (max-width: 951px) {
     .menu-toggle {
         display: block; /* Show button on mobile */
         width: 40px; /* Size adjustment */
