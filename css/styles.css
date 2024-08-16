@@ -12,13 +12,12 @@ body {
     padding: 50px 20px;
     padding-bottom: 5px;
     text-align: center;
-    min-height: 340px; /* Adjust this value as needed */
+    min-height: 320px; /* Adjust this value as needed */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-
 .hero-content h1 {
     font-size: 48px;
     margin-bottom: 20px;
