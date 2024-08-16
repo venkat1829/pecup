@@ -67,7 +67,7 @@ section {
     background-color: #95949411; /* Set the background color inside the border */
     padding: 20px; /* Optional: Add padding inside the border for better appearance */
     border-radius: 20px; /* Optional: Add rounded corners */
-    margin: 50px 50px; /* Optional: Add margin to separate from other sections */
+    margin: 50px 12px; /* Optional: Add margin to separate from other sections */
 }
 
 #reminders {
@@ -75,7 +75,7 @@ section {
     background-color: #95949411; /* Set the background color inside the border */
     padding: 20px; /* Optional: Add padding inside the border for better appearance */
     border-radius: 8px; /* Optional: Add rounded corners */
-    margin: 50px 50px; /* Optional: Add margin to separate from other sections */
+    margin: 50px 12px; /* Optional: Add margin to separate from other sections */
 }
 #resources a, #archive a {
     color: #000;
@@ -93,7 +93,7 @@ section {
     background-color: #95949411; /* Set the background color inside the border */
     padding: 20px; /* Optional: Add padding inside the border for better appearance */
     border-radius: 20px; /* Optional: Add rounded corners */
-    margin: 50px 50px; /* Optional: Add margin to separate from other sections */
+    margin: 50px 12px; /* Optional: Add margin to separate from other sections */
 }
 
 #archive {
@@ -101,7 +101,7 @@ section {
     background-color: #95949411; /* Set the background color inside the border */
     padding: 20px; /* Optional: Add padding inside the border for better appearance */
     border-radius: 8px; /* Optional: Add rounded corners */
-    margin: 50px 50px; /* Optional: Add margin to separate from other sections */
+    margin: 50px 12px; /* Optional: Add margin to separate from other sections */
 }
 
 
