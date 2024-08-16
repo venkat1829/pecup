@@ -61,7 +61,22 @@ section {
     text-decoration: underline;
 
 } */
+ 
+#home {
+    border: 0px solid #ff5733; /* Adjust the border width and color as needed */
+    background-color: #95949411; /* Set the background color inside the border */
+    padding: 20px; /* Optional: Add padding inside the border for better appearance */
+    border-radius: 20px; /* Optional: Add rounded corners */
+    margin: 50px 50px; /* Optional: Add margin to separate from other sections */
+}
 
+#reminders {
+    border: 0px solid #ff5733; /* Adjust the border width and color as needed */
+    background-color: #95949411; /* Set the background color inside the border */
+    padding: 20px; /* Optional: Add padding inside the border for better appearance */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    margin: 50px 50px; /* Optional: Add margin to separate from other sections */
+}
 #resources a, #archive a {
     color: #000;
     text-decoration: none;
@@ -73,6 +88,21 @@ section {
     text-decoration: underline;
 }
 
+#resources {
+    border: 0px solid #ff5733; /* Adjust the border width and color as needed */
+    background-color: #95949411; /* Set the background color inside the border */
+    padding: 20px; /* Optional: Add padding inside the border for better appearance */
+    border-radius: 20px; /* Optional: Add rounded corners */
+    margin: 50px 50px; /* Optional: Add margin to separate from other sections */
+}
+
+#archive {
+    border: 0px solid #ff5733; /* Adjust the border width and color as needed */
+    background-color: #95949411; /* Set the background color inside the border */
+    padding: 20px; /* Optional: Add padding inside the border for better appearance */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    margin: 50px 50px; /* Optional: Add margin to separate from other sections */
+}
 
 
 /* Footer */
