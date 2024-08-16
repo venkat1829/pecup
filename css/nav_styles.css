@@ -1,6 +1,7 @@
 /* Navbar */
 .navbar {
     background-color: #000;
+    font-family: monospace;
     padding: 20px 20px;
     display: flex;
     align-items: center;

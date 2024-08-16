@@ -1,0 +1,21 @@
+/* Apply monospace font to the navbar and its contents */
+.navbar {
+    font-family: monospace; /* Sets the font for the navbar */
+}
+
+.navbar .logo {
+    font-family: monospace; /* Ensures the logo uses monospace */
+}
+
+.navbar .nav-links {
+    font-family: monospace; /* Ensures all nav links use monospace */
+}
+
+.navbar .nav-links a {
+    font-family: monospace; /* Ensures links within the navbar use monospace */
+}
+
+.navbar .menu-toggle {
+    font-family: monospace; /* Ensures the menu toggle button uses monospace */
+}
+

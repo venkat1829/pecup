@@ -1,19 +1,23 @@
 body {
-    font-family: monospace;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
 }
 
 
 #hero {
     background-color: #f4f4f4;
+    font-family: monospace;
     padding: 50px 20px;
     padding-bottom: 5px;
     text-align: center;
+    min-height: 320px; /* Adjust this value as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-
 .hero-content h1 {
     font-size: 48px;
     margin-bottom: 20px;
@@ -69,9 +73,12 @@ section {
     text-decoration: underline;
 }
 
+
+
 /* Footer */
 footer {
     background-color: #000;
+    /* font-family: monospace; here i have set font of footer */
     color: #fff;
     padding: 50px 20px;
 }

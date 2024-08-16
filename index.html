@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEC.UP</title>
     <link rel="stylesheet" href="css/nav_styles.css">
+    <link rel="stylesheet" href="css/scrooling_text.css">
+    <link rel="stylesheet" href="css/watermark.css">
     <link rel="stylesheet" href="css/styles.css">
     <!-- <script src="scripts/script.js"></script> -->
 
@@ -49,6 +51,11 @@
         </div>
     </nav>
 
+    <!-- <div class="scrolling-text">
+        <p>విద్యా దానసంపన్నా సుస్మితం సదా సుశీలమైనా।
+            బ్రహ్మరూపమయా తిష్టా శాంతి వర్ధంతి కిలా సప్తస్వరైర్భువి శాస్త్రి శ్రీప్రేమన్ సజీవశేఖరం,
+            సుకవిని విద్యార్హం దేవాస్సంపత్ సిద్ధిః పమంతా</p>
+    </div> -->
 
     <section id="hero">
         <div class="hero-content text-container">
@@ -80,7 +87,9 @@
         <a href="https://drive.google.com/file/d/14OIpuf3vNxc44AQEfl8dhJjC1bOSWggi/view?usp=sharing" target="_blank">
             &rArr; Syllabus</a>
         <a href="https://drive.google.com/file/d/14gvhgwBn9uVNwKUJznPH0AH7HvqaQzjs/view?usp=sharing" target="_blank">
-            &rArr; Timetable</a>
+            &rArr; Day Schedule</a>
+        <a href="https://drive.google.com/file/d/183uqMn5IucmVzHwCx0D4-ARwehqZuC_P/view?usp=sharing" target="_blank">
+            &rArr; Mid 1 Timetable</a>
 
         <p>Our offerings include:</p>
         <ul>
@@ -102,51 +111,53 @@
         <h2>Reminders</h2>
         <div id="reminder-text">
             <ul>
-                <p>Results are Uploaded!! <a href="https://sip.pragati.ac.in">link</a></p>
-                <p>Bring DLCO Class Test Notebook!! for CSE-B</p>
+                <p>Mid 1 Timetable!! <a href="https://drive.google.com/file/d/183uqMn5IucmVzHwCx0D4-ARwehqZuC_P/view?usp=sharing">link</a></p>
+                <p>Results are Uploaded!! <a href="Mid 1 t">link</a></p>
+                <!-- <p>Bring DLCO Class Test Notebook!! for CSE-B</p> -->
             </ul>
         </div>
         <h2>Deadlines</h2>
         <ul>
             <p id="deadline1">
-                Java Assignment 2: 14 August, 2024
+                Java Assignment 2: 17 August, 2024
                 <span class="countdown" id="countdown1"></span>
             </p>
-            <!-- Add more deadlines as needed -->
             <p id="deadline2">
-                DLCO Assignment 2: 15 August, 2024
+                ADS Assignment 2: 20 August, 2024
                 <span class="countdown" id="countdown2"></span>
             </p>
-            <p id="deadline3">
+            <!-- <p id="deadline3">
                 DLCO Assignment 3: 20 August, 2024
                 <span class="countdown" id="countdown3"></span>
-            </p>
+            </p> -->
         </ul>
         <script>
             function updateCountdowns() {
                 const deadlines = {
-                    "countdown1": new Date("2024-08-14"), // Java Assignment
-                    "countdown2": new Date("2024-08-15"), // DLCO Assignment
-                    "countdown3": new Date("2024-08-20"),  // DLCO Assignment
+                    "countdown1": new Date("2024-08-17"), // deadline 1
+                    "countdown2": new Date("2024-08-20"), // deadline 2
+                    "countdown3": new Date("2024-08-20"), // deadline 3
                 };
-
+        
                 const today = new Date();
                 today.setHours(0, 0, 0, 0); // Set to start of the day
-
+        
                 for (const [id, deadlineDate] of Object.entries(deadlines)) {
                     const timeDiff = deadlineDate - today;
-                    const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)); // Convert to days
-
+                    const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)) - 1; // Subtract 1 to exclude today
+        
                     // Update the HTML with the countdown
                     const countdownElement = document.getElementById(id);
-                    if (daysLeft > 0) {
+                    if (daysLeft > 1) {
                         countdownElement.textContent = ` [${daysLeft} days left]`;
+                    } else if (daysLeft === 1) {
+                        countdownElement.textContent = ` [1 day left]`;
                     } else {
                         countdownElement.textContent = ' [Deadline passed]';
                     }
                 }
             }
-
+        
             // Run the function when the page loads
             window.onload = updateCountdowns;
         </script>
@@ -157,12 +168,12 @@
     <section id="resources">
         <h1>Resources</h1>
         <div>
-            <p>
-                <a href="#notes">Notes</a>
-                <a href="#assignments">Assignments</a>
-                <a href="#tests">Tests</a>
-                <a href="#records">Records</a>
-            </p>
+            <h4>
+                <a href="#notes">Notes</a>&nbsp;&nbsp;
+                <a href="#assignments">Assignments</a>&nbsp;&nbsp;
+                <a href="#tests">Tests</a>&nbsp;&nbsp;
+                <a href="#records">Records</a>&nbsp;&nbsp;
+            </h4>
         </div>
         <div class="resources-container">
             <div class="resources-column">
@@ -171,7 +182,7 @@
                 </h2>
                 <h3>Unit 1</h3>
                 <ul>
-                    <!-- <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">DM/GT</a></li> -->
+                    <li><a href="https://drive.google.com/file/d/15wn4D4PvQ7P5M2XMIxpv__8CDcvQs_QS/view?usp=sharing" target="_blank">DMGT</a></li>
                     <li><a href="https://drive.google.com/file/d/130MKouxcby66c2HBTM422Yez11jWJyiJ/view?usp=sharing"
                             target="_blank">ADS</a></li>
                     <!-- <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">Java</a></li> -->
@@ -306,7 +317,7 @@
                             target="_blank">Python</a></li>
                     <li><a href="https://drive.google.com/file/d/13CLlJIH4w17YX-4RM8RinmF_snnGqimx/view?usp=sharing"
                             target="_blank">Java</a></li>
-                    <li><a href="https://drive.google.com/file/d/13CLlJIH4w17YX-4RM8RinmF_snnGqimx/view?usp=sharing"
+                    <li><a href="https://drive.google.com/file/d/13GVOlehybqTRRdE7lxyQ7JAFCAvVaM5V/view?usp=sharing"
                             target="_blank">ADS</a></li>
                     <br>
                 </ul>
@@ -486,13 +497,24 @@
 
     <div style="height: 20px;"></div> <!-- Spacer -->
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Yeswanth Madasu</p>
-        <p>2nd Year CSE-B</p>
-        <p>Phone No. 6969-696969</p>
-        <p>work.pecup@gmail.com</p>
-        <a href="https://wa.me/919676242565" target="_blank">Request Resources</a>
+    <section style="font-family: monospace;" id="archive" class="contacts">
+        <h1>Contacts</h1>
+        <div class="archive-container">
+            <div class="archive-column">
+                <h4>Work</h4>
+                <p>Yeswanth Madasu</p>
+                <p>2nd Year CSE-B</p>
+                <p><a href="https://www.linkedin.com/in/yeswanth-madasu-41525b297/" target="_blank">Linkedin</a></p>
+                <p><a href="mailto:work.pecup@gmail.com">Work Mail</a></p>
+            </div>
+            <!-- <div class="archive-column">
+                <h4>Work</h4>
+                <p>Venkata Kumar Geddada</p>
+                <p>2nd Year CSE-B</p>
+                <a href="https://www.linkedin.com/in/venkatakumar-g-9349852a4/" target="_blank">linkedin</a>
+            </div> -->
+        </div>
+        <h3><a href="https://wa.me/919676242565" target="_blank">Request Resources</a></h3>
     </section>
 
     <div class="overlay-container">
@@ -519,9 +541,9 @@
                     <h3>Necessary</h3>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#reminders">Reminders</a></li>
-                        <li><a href="#resources">Resources</a></li>
-                        <li><a href="#archive">Archive</a></li>
+                        <li><a href="https://pragati.ac.in/" target="_blank">Pragati</a></li>
+                        <li><a href="https://sip.pragati.ac.in/" target="_blank">Student Portal</a></li>
+                        <li><a href="https://csepragati.com/" target="_blank">Coordinator Page</a></li>
                     </ul>
                 </div>
                 <div class="footer-column" id="address_section">
