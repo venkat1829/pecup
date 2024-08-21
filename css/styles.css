@@ -62,20 +62,19 @@ section {
 
 } */
  
-#home {
-    border: 0px solid #ff5733; /* Adjust the border width and color as needed */
-    background-color: #95949411; /* Set the background color inside the border */
-    padding: 20px; /* Optional: Add padding inside the border for better appearance */
-    border-radius: 20px; /* Optional: Add rounded corners */
-    margin: 50px 12px; /* Optional: Add margin to separate from other sections */
-}
-
-#reminders {
-    border: 0px solid #ff5733; /* Adjust the border width and color as needed */
-    background-color: #95949411; /* Set the background color inside the border */
-    padding: 20px; /* Optional: Add padding inside the border for better appearance */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    margin: 50px 12px; /* Optional: Add margin to separate from other sections */
+#home, #reminders, #resources, #archive {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(135, 132, 132, 0.5);
+    border-bottom: 1px solid rgba(135, 132, 132, 0.5);
+    border-right: 1px solid rgba(135, 132, 132, 0.5);
+    border-radius: 20px;
+    margin: 50px 12px;
+    /* display: flex; */
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
 }
 #resources a, #archive a {
     color: #000;
@@ -87,23 +86,6 @@ section {
     color: #ff5733;
     text-decoration: underline;
 }
-
-#resources {
-    border: 0px solid #ff5733; /* Adjust the border width and color as needed */
-    background-color: #95949411; /* Set the background color inside the border */
-    padding: 20px; /* Optional: Add padding inside the border for better appearance */
-    border-radius: 20px; /* Optional: Add rounded corners */
-    margin: 50px 12px; /* Optional: Add margin to separate from other sections */
-}
-
-#archive {
-    border: 0px solid #ff5733; /* Adjust the border width and color as needed */
-    background-color: #95949411; /* Set the background color inside the border */
-    padding: 20px; /* Optional: Add padding inside the border for better appearance */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    margin: 50px 12px; /* Optional: Add margin to separate from other sections */
-}
-
 
 /* Footer */
 footer {
@@ -374,12 +356,14 @@ html {
     opacity: 0; /* Start hidden */
     transform: translateY(20px); /* Start slightly below */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    pointer-events: none;
 }
 
 /* Display the menu with animation when the button is clicked */
 #menu-toggle:checked + .overlay-button + .menu {
     opacity: 1;
     transform: translateY(0); /* Move to its normal position */
+    pointer-events: auto;
 }
 
 /* Styling for each icon in the menu */
