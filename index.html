@@ -39,7 +39,7 @@
                 &#9776; <!-- Hamburger icon -->
             </button>
             <ul class="nav-links">
-                <li class="large-gap"><a href="#top">&#8962 Home</a></li>
+                <li class="large-gap"><a href="#home">&#8962 Home</a></li>
                 <li class="large-gap"><a href="#reminders">&#128197 Reminders</a></li>
                 <li class="large-gap"><a href="#resources">&#128221 Resources</a></li>
                 <li class="large-gap"><a href="#archive">&#128193 Archive</a></li>
@@ -105,13 +105,15 @@
 
     </section>
 
-    <div style="height: 20px;"></div> <!-- Spacer -->
+    <div style="height: 50px;"></div> <!-- Spacer -->
 
     <section id="reminders">
         <h2>Reminders</h2>
         <div id="reminder-text">
             <ul>
-                <p>Mid 1 Timetable!! <a href="https://drive.google.com/file/d/183uqMn5IucmVzHwCx0D4-ARwehqZuC_P/view?usp=sharing">link</a></p>
+                <p>Mid 1 Timetable!! <a
+                        href="https://drive.google.com/file/d/183uqMn5IucmVzHwCx0D4-ARwehqZuC_P/view?usp=sharing">link</a>
+                </p>
                 <p>Results are Uploaded!! <a href="Mid 1 t">link</a></p>
                 <!-- <p>Bring DLCO Class Test Notebook!! for CSE-B</p> -->
             </ul>
@@ -131,36 +133,6 @@
                 <span class="countdown" id="countdown3"></span>
             </p> -->
         </ul>
-        <script>
-            function updateCountdowns() {
-                const deadlines = {
-                    "countdown1": new Date("2024-08-17"), // deadline 1
-                    "countdown2": new Date("2024-08-20"), // deadline 2
-                    "countdown3": new Date("2024-08-20"), // deadline 3
-                };
-        
-                const today = new Date();
-                today.setHours(0, 0, 0, 0); // Set to start of the day
-        
-                for (const [id, deadlineDate] of Object.entries(deadlines)) {
-                    const timeDiff = deadlineDate - today;
-                    const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)) - 1; // Subtract 1 to exclude today
-        
-                    // Update the HTML with the countdown
-                    const countdownElement = document.getElementById(id);
-                    if (daysLeft > 1) {
-                        countdownElement.textContent = ` [${daysLeft} days left]`;
-                    } else if (daysLeft === 1) {
-                        countdownElement.textContent = ` [1 day left]`;
-                    } else {
-                        countdownElement.textContent = ' [Deadline passed]';
-                    }
-                }
-            }
-        
-            // Run the function when the page loads
-            window.onload = updateCountdowns;
-        </script>
     </section>
 
     <div style="height: 20px;"></div> <!-- Spacer -->
@@ -182,11 +154,12 @@
                 </h2>
                 <h3>Unit 1</h3>
                 <ul>
-                    <li><a href="https://drive.google.com/file/d/15wn4D4PvQ7P5M2XMIxpv__8CDcvQs_QS/view?usp=sharing" target="_blank">DMGT</a></li>
+                    <li><a href="https://drive.google.com/file/d/15wn4D4PvQ7P5M2XMIxpv__8CDcvQs_QS/view?usp=sharing"
+                            target="_blank">DMGT</a></li>
                     <li><a href="https://drive.google.com/file/d/130MKouxcby66c2HBTM422Yez11jWJyiJ/view?usp=sharing"
                             target="_blank">ADS</a></li>
-                    <!-- <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">Java</a></li> -->
-                    <!-- <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">DLCO</a></li> -->
+                    <li><a href="https://drive.google.com/file/d/15ghqP5Ws-qx3Url1uF_ChdfQk5FNidyl/view?usp=sharing" target="_blank">Java</a></li>
+                    <li><a href="https://drive.google.com/file/d/1BhDoSn1ovPdiN4VT0iHoSnawpHUJiVaU/view?usp=sharing" target="_blank">DLCO</a></li>
                     <li><a href="https://drive.google.com/file/d/12Pc54j_bBcYH6K-GAqdYuGNHWMrsTxgI/view?usp=sharing"
                             target="_blank">UHV</a></li>
                     <br>
@@ -239,7 +212,7 @@
                 </ul>
                 <!-- <h3>Assignment 2</h3>
                 <ul>
-                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">DM/GT</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">DMGT</a></li>
                     <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">ADS</a></li>
                     <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">Java</a></li>
                     <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">DLCO</a></li>
@@ -498,7 +471,7 @@
     <div style="height: 20px;"></div> <!-- Spacer -->
 
     <section style="font-family: monospace;" id="archive" class="contacts">
-        <h1>Contacts</h1>
+        <h1 id="contacts">Contacts</h1>
         <div class="archive-container">
             <div class="archive-column">
                 <h4>Work</h4>
@@ -559,7 +532,7 @@
                 <div class="footer-column">
                     <h3>Connect</h3>
                     <ul>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#contacts">Contact</a></li>
                         <li><a href="https://www.instagram.com/__yeswanth9/" target="_blank">Instagram</a></li>
                         <li><a href="https://www.linkedin.com/in/yeswanth-madasu-41525b297/"
                                 target="_blank">Linkedin</a></li>
@@ -573,7 +546,6 @@
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
 
     <script>
         const texts = ["Bored with studies? Not anymore!", "for you and us!", "resources that are actually useful"];
@@ -614,7 +586,50 @@
 
     </script>
 
+    <script>
+        function updateCountdowns() {
+            const deadlines = {
+                "countdown1": new Date("2024-08-17"), // deadline 1
+                "countdown2": new Date("2024-08-20"), // deadline 2
+                // "countdown3": new Date("2024-08-20"), // deadline 3
+            };
 
+            const today = new Date();
+            today.setHours(0, 0, 0, 0); // Set to start of the day
+
+            for (const [id, deadlineDate] of Object.entries(deadlines)) {
+                const timeDiff = deadlineDate - today;
+                const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)) - 1; // Subtract 1 to exclude today
+
+                // Update the HTML with the countdown
+                const countdownElement = document.getElementById(id);
+                if (daysLeft > 1) {
+                    countdownElement.textContent = ` [${daysLeft} days left]`;
+                } else if (daysLeft === 1) {
+                    countdownElement.textContent = ` [1 day left]`;
+                } else {
+                    countdownElement.textContent = ' [Deadline passed]';
+                }
+            }
+        }
+
+        // Run the function when the page loads
+        window.onload = updateCountdowns;
+    </script>
+
+<script type="text/javascript">
+    (function(d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+          window.voiceflow.chat.load({
+            verify: { projectID: '66bf66d1563de4b15abc86b3' },
+            url: 'https://general-runtime.voiceflow.com',
+            versionID: 'production'
+          });
+        }
+        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
 
 
 </body>
