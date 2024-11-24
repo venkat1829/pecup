@@ -5,20 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEC.UP</title>
-    <link rel="stylesheet" href="frontend/css/nav_styles.css">
-    <link rel="stylesheet" href="frontend/css/scrooling_text.css">
-    <link rel="stylesheet" href="frontend/css/watermark.css">
-    <link rel="stylesheet" href="frontend/css/styles.css">
+    <!-- Content Security Policy Meta Tag -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com;
+    style-src 'self' 'unsafe-inline';
+    img-src 'self';
+    connect-src 'self' https://www.google-analytics.com;
+    object-src 'self';
+    "> -->
+    <link rel="stylesheet" href="css/nav_styles.css">
+    <link rel="stylesheet" href="css/scrooling_text.css">
+    <link rel="stylesheet" href="css/watermark.css">
+    <link rel="stylesheet" href="css/styles.css">
     <!-- <script src="scripts/script.js"></script> -->
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Favicon for different sizes -->
-    <link rel="icon" href="frontend/images/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="frontend/images/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="frontend/images/favicon-192x192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="frontend/images/favicon-512x512.png" sizes="512x512" type="image/png">
+    <link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicon-192x192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="/images/favicon-512x512.png" sizes="512x512" type="image/png">
     <!-- Apple Touch Icon for Safari bookmarks -->
-    <link rel="apple-touch-icon" href="frontend/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQ8G7RBY0H"></script>
@@ -29,6 +38,17 @@
 
         gtag('config', 'G-MQ8G7RBY0H');
     </script>
+
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function (OneSignal) {
+            await OneSignal.init({
+                appId: "961b2ded-f286-45bb-a843-cfec615f565c",
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -80,7 +100,7 @@
         <h4>- Team PECUP</h4>
     </section> -->
 
-    <section id="home">
+    <!-- <section id="home">
         <h2>Home</a></h2>
         <p>Welcome to our website, where we provide a range of useful study resources to support your academic journey.
         </p>
@@ -113,35 +133,100 @@
 
         <p>Our resources are well-organized to help you find what you need efficiently.</p>
 
-    </section>
+    </section> -->
 
+    <section id="prime">
+        <h1>Prime Resources</h1>
+            <p>This section is designed to provide easy access to essential exam resources:</p>
+            <a href="https://drive.google.com/file/d/1Ct-WUYsoJlB3nHoOvaqvlRO9w1Qqv3aC/view?usp=sharing" target="_blank" style="color: #ff5733;">
+                &rArr; DLCO Model Paper</a>
+            <a href="https://drive.google.com/file/d/1Eb7b2CQld4TMW9PuMEwOuqv3FRVWKpVe/view?usp=sharing" target="_blank" style="color: #ff5733;">
+                &rArr; Syllabus</a>
+            
+            <a href="https://drive.google.com/file/d/1AHJQ8HReGUII1LU7CRDBfaF_MOmO7Wab/view?usp=sharing" target="_blank" style="color: #ff5733;">
+                &rArr; Sem Timetable</a>
+            <ul>
+                <li><strong>Notes:</strong> Comprehensive and well-structured study materials.</li>
+                <li><strong>Assignments:</strong> Subject-specific questions with solutions, where available.</li>
+                <li><strong>Past Papers:</strong> Previous year question papers for thorough practice.</li>
+                <li><strong>Reference Materials:</strong> Additional guides to enhance understanding.</li>
+            </ul>
+
+        <p id="deadline1">
+            <strong>DLCO</strong> Sem Exam : 25 November 2024
+            <span class="countdown" id="countdown3"></span>
+        </p>
+        <div class="prime-container">
+            <div class="prime-column">
+                <h3>Notes</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1BhDoSn1ovPdiN4VT0iHoSnawpHUJiVaU/view?usp=sharing"
+                            target="_blank">Unit 1</a></li>
+                    <li><a href="https://drive.google.com/file/d/1FJIEvxeY_gdgoj16MbRtL7sMkMwdWx1A/view?usp=sharing"
+                            target="_blank">Unit 2</a></li>
+                    <li><a href="https://drive.google.com/file/d/1insbSzqB30Prvxb3r5szfArbAF-9Pi41/view?usp=sharing"
+                            target="_blank">Unit 3</a></li>
+                    <li><a href="https://drive.google.com/file/d/1ilvo4JhwTi1aP3hDhDT6rPCX-Yan5fqv/view?usp=share_link"
+                            target="_blank">Unit 4</a></li>
+                    <li><a href="https://drive.google.com/file/d/1il6-m6K6w_D47heOk3XXDZFfEWNEhZcI/view?usp=sharing"
+                            target="_blank">Unit 5</a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="prime-column">
+                <h3>Assignments</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/11kC6-Djg3hAjdXzJqI2Py7uwFP6n6ylK/view?usp=sharing"
+                            target="_blank">Assignment 1</a></li>
+                    <li><a href="https://drive.google.com/file/d/1qUVwgxP85GR1Ev-rDGJOd73b8zuzMoaM/view?usp=share_link"
+                            target="_blank">Assignment 2</a></li>
+                    <li><a href="https://drive.google.com/file/d/1j4bqtmiS1Xdgt3Yo_iF5emS8zrOMghA6/view?usp=share_link"
+                            target="_blank">Assignment 3</a></li>
+                    <li><a href="https://drive.google.com/file/d/1j9mSd4nJ8Z7empBUlqgckFl6ySM54pyb/view?usp=sharing"
+                            target="_blank">Assignment 4</a></li>
+                    <li><a href="https://drive.google.com/file/d/1ovapcmpIKlgjrwMkHyk8dwzDe2SVzRTX/view?usp=sharing"
+                            target="_blank">Assignment 5</a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="prime-column">
+                <h3>Papers</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/164tbdjenBlGeQQmTkzPhjhqBfh6Ow6V1/view?usp=share_link"
+                            target="_blank">Mid 1</a></li>
+                    <li><a href="https://drive.google.com/file/d/16iBfYTeDqLhG8J1dF3E5XIQbIANxrJTP/view?usp=share_link"
+                            target="_blank">Mid 2</a></li>
+                    <li><a href="https://drive.google.com/file/d/1h1IPhPNsCHYvJMkoVQLEd9g2k-str5SX/view?usp=share_link"
+                            target="_blank">Previous Year Papers</a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="prime-column">
+                <h3 id="ref">References</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1Ct-WUYsoJlB3nHoOvaqvlRO9w1Qqv3aC/view?usp=sharing"
+                            target="_blank">DLCO Model Paper</a></li>
+                    <li><a href="https://drive.google.com/file/d/1mnFVS62eH_KSL8Y7AG8CT2nkkk8SYg4a/view?usp=share_link"
+                            target="_blank">Reference Q's Paper</a></li>
+                    <br>
+                </ul>
+            </div>
+        </div>
+        <p>Our resources are well-organized to help you find what you need efficiently.</p>
+    </section>
     <div style="height: 50px;"></div> <!-- Spacer -->
 
     <section id="reminders">
         <h2>Reminders</h2>
         <div id="reminder-text">
             <ul>
+                <p>Previous Year Papers were uploaded here : <a href="#previous">Previous.Papers</a>
+                <br>Due to regulations, exact subjects were not available.</p>
                 <p>Mid 1, Mid 2 Papers of Year 2 Sem 1 Are Uploaded here :<a href="#tests">Papers</a></p>
-                <p>Lab Externals timetable !! <a
-                        href="https://drive.google.com/file/d/16tTbTftR7MItkie2N8IqHrSXBMSd2AfM/view?usp=share_link"
-                        target="_blank">link</a>
-                </p>
-                <p>Sem Timetable!! <a
-                        href="https://drive.google.com/file/d/1AHJQ8HReGUII1LU7CRDBfaF_MOmO7Wab/view?usp=share_link"
-                        target="_blank">link</a>
-                </p>
-                <p>Mid 2 Timetable!! <a
-                        href="https://drive.google.com/file/d/1plqNtFOTnABzCc-OTkoV6SaL31ZbHL8t/view?usp=sharing"
-                        target="_blank">link</a>
-                </p>
             </ul>
         </div>
         <h2>Deadlines</h2>
         <ul>
-            <p id="deadline3">
-                Lab Externals Preparation Starts : 13 November 2024
-                <span class="countdown" id="countdown3"></span>
-            </p>
             <p id="deadline1">
                 Sem Examinations Starts: 20 November 2024
                 <span class="countdown" id="countdown1"></span>
@@ -240,30 +325,19 @@
                             target="_blank">UHV</a></li>
                     <br>
                 </ul>
-                <h3>Study Materials</h3>
+                <h3 id="study">Study Materials</h3>
                 <ul>
-                    <!-- <li><a href="https://drive.google.com/file/d/1DYCjZ31IYQLlbUW9HSBUOuL_FxcJU0Vs/view?usp=sharing"
-                            target="_blank">DMGT</a></li> -->
-                    <li><a href="https://drive.google.com/file/d/1LWvsxdonRgk8XwUttSdk76HBAUnkCzvn/view?usp=sharing"
-                            target="_blank">ADS Unit 1</a></li>
-                    <li><a href="https://drive.google.com/file/d/1Ld2DVnQHO3Vm9jinaN316eBE9kmfbfpI/view?usp=sharing"
-                            target="_blank">ADS Unit 2</a></li>
-                    <li><a href="https://drive.google.com/file/d/11K34edDLwwHnjlKqj9xef0H_CUjVk8WA/view?usp=share_link"
-                            target="_blank">ADS Unit 4</a></li>
+                    <li><a href="https://drive.google.com/file/d/1cTY0dlPM1S0esW2dIq-WHlhg0-mRQx0m/view?usp=share_link"
+                            target="_blank">DMGT  All Units</a></li>
+                        <br>
+                    <li><a href="https://drive.google.com/file/d/1D2tQiSlgxwehmSOpUqdaycGDN8a_9sZ0/view?usp=share_link"
+                            target="_blank">ADS All Units</a></li>
                     <br>
-                    <li><a href="https://drive.google.com/file/d/1ApqIWuo4pinJ2Jgx7kGFjoen23-D9bCy/view?usp=sharing"
-                            target="_blank">JAVA Unit 1</a></li>
-                    <li><a href="https://drive.google.com/file/d/1Lea94asaJ3xuu0BAbsPG9QafptfF73IS/view?usp=sharing"
-                            target="_blank">JAVA Unit 2</a></li>
-                    <li><a href="https://drive.google.com/file/d/1pTWT51FEqczmboPgtsCJpqsc1sQum1iA/view?usp=sharing"
-                            target="_blank">JAVA Unit 3</a></li>
-                    <li><a href="https://drive.google.com/file/d/1pa_xgeBM0zWc5vdJgJ8VS4BVPekrwmQr/view?usp=sharing"
-                            target="_blank">JAVA Unit 4</a></li>
-                    <li><a href="https://drive.google.com/file/d/1pj5WwMWrUkMeXkMmGCoygMfNWaLm3ObM/view?usp=sharing"
-                            target="_blank">JAVA Unit 5</a></li>
+                    <li><a href="https://drive.google.com/file/d/1G2lMNrviZCPX-FMakCgW8wyOEulRoY_M/view?usp=share_link"
+                            target="_blank">JAVA All Units</a></li>
                     <br>
                     <li><a href="https://drive.google.com/file/d/1LRd3ZvKiEHD6iovd3yIFnuxCBNX_ioZy/view?usp=sharing"
-                            target="_blank">ES (All Units) </a></li>
+                            target="_blank">ES All Units </a></li>
                     <br>
                 </ul>
                 <!-- <h3>Unit 4</h3>
@@ -306,7 +380,7 @@
                             target="_blank">JAVA</a></li>
                     <li><a href="https://drive.google.com/file/d/1qUVwgxP85GR1Ev-rDGJOd73b8zuzMoaM/view?usp=share_link"
                             target="_blank">DLCO</a></li>
-                    <li><a href="https://drive.google.com/file/d/1qUVwgxP85GR1Ev-rDGJOd73b8zuzMoaM/view?usp=sharing"
+                    <li><a href="https://drive.google.com/file/d/1Lmfn5LNWakkTD0YQGHpJB-eXz9987Cld/view?usp=sharing"
                             target="_blank">UHV</a></li>
                     <br>
                 </ul>
@@ -383,6 +457,18 @@
                             target="_blank">DLCO</a></li>
                     <li><a href="https://drive.google.com/file/d/16PfSjzL7fdMqur3hKUv-sUydxt-o978a/view?usp=share_link"
                             target="_blank">UHV</a></li>
+                    <br>
+                </ul>
+                <h3 id="previous">Previous Papers </h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1lHcJhYKLfH18fwUNBbgBnewoiS8bNOKN/view?usp=share_link"
+                            target="_blank">DMGT (MFCS) </a></li>
+                    <li><a href="https://drive.google.com/file/d/1Z-PE8kHI0T65fxMnkPzUp12atUMnvw9E/view?usp=share_link"
+                            target="_blank">ADS</a></li>
+                    <li><a href="https://drive.google.com/file/d/1OCNw55qfCc-8h9XJzWjAxa75x9TILbkv/view?usp=share_link"
+                            target="_blank">JAVA</a></li>
+                    <li><a href="https://drive.google.com/file/d/1h1IPhPNsCHYvJMkoVQLEd9g2k-str5SX/view?usp=share_link"
+                            target="_blank">DLCO</a></li>
                     <br>
                 </ul>
             </div>
@@ -591,12 +677,17 @@
                 <p><a href="https://www.linkedin.com/in/yeswanth-madasu-41525b297/" target="_blank">Linkedin</a></p>
                 <p><a href="mailto:work.pecup@gmail.com">Work Mail</a></p>
             </div>
-            <!-- <div class="archive-column">
+            <div class="archive-column">
                 <h4>Work</h4>
                 <p>Venkata Kumar Geddada</p>
                 <p>2nd Year CSE-B</p>
                 <a href="https://www.linkedin.com/in/venkatakumar-g-9349852a4/" target="_blank">linkedin</a>
-            </div> -->
+            </div>
+            <div class="archive-column">
+                <h4>Work</h4>
+                <p>Kavya Sri</p>
+                <p>2nd Year CSE-B</p>
+            </div>
         </div>
         <h3><a href="https://wa.me/919676242565" target="_blank">Request Resources</a></h3>
     </section>
@@ -604,15 +695,15 @@
     <div class="overlay-container">
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="overlay-button">
-            <img src="frontend/images/dots.gif" alt="Home" class="menu-icon" />
+            <img src="images/dots.gif" alt="Home" class="menu-icon" />
         </label>
 
         <div class="menu">
             <!-- <a href="#home"><p class="menu-icon">&#8962</p></a> -->
-            <a href="#top"><img src="frontend/images/home.gif" alt="Home" class="menu-icon" /></a>
-            <a href="#reminders"><img src="frontend/images/reminders.png" alt="Reminders" class="menu-icon" /></a>
-            <a href="#resources"><img src="frontend/images/document.png" alt="Resources" class="menu-icon" /></a>
-            <a href="#archive"><img src="frontend/images/folder.png" alt="Archive" class="menu-icon" /></a>
+            <a href="#top"><img src="images/home.gif" alt="Home" class="menu-icon" /></a>
+            <a href="#reminders"><img src="images/reminders.png" alt="Reminders" class="menu-icon" /></a>
+            <a href="#resources"><img src="images/document.png" alt="Resources" class="menu-icon" /></a>
+            <a href="#archive"><img src="images/folder.png" alt="Archive" class="menu-icon" /></a>
         </div>
     </div>
 
@@ -659,7 +750,7 @@
     </footer>
 
     <script>
-        const texts = ["ready for SEM ?, PEC.UP is ready to serve for SEM", "Tired of textbooks? Not anymore!", "Made for students, by students!"];
+        const texts = [ "DLCO: The exam you can decode with ease.", "Now I have become studious… the destroyer of exams..", "Made for students, by students!"];
         let count = 0;
         let index = 0;
         let currentText = '';
@@ -702,7 +793,7 @@
             const deadlines = {
                 "countdown1": new Date("2024-11-20"), // deadline 1
                 "countdown2": new Date("2024-11-29"), // deadline 2
-                "countdown3": new Date("2024-11-13"),
+                "countdown3": new Date("2024-11-25"),
             };
 
             const today = new Date();
@@ -728,22 +819,6 @@
         window.onload = updateCountdowns;
     </script>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6833146725134398"
-        crossorigin="anonymous"></script>
-
-    <script type="text/javascript">
-        (function (d, t) {
-            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-            v.onload = function () {
-                window.voiceflow.chat.load({
-                    verify: { projectID: '66d1972417c8d47638beb179' },
-                    url: 'https://general-runtime.voiceflow.com',
-                    versionID: 'production'
-                });
-            }
-            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-        })(document, 'script');
-    </script>
 </body>
 
 </html>

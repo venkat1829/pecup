@@ -61,8 +61,12 @@ section {
     text-decoration: underline;
 
 } */
+
+#imp h4{
+    color: #ff5733;
+}
  
-#home, #reminders, #resources, #archive {
+#imp, #prime, #home, #reminders, #resources, #archive {
     padding: 20px;
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(1px);
@@ -76,13 +80,13 @@ section {
     gap: 30px;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
 }
-#resources a, #archive a {
+#resources a, #archive a, #prime a {
     color: #000;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-#resources a:hover, #archive a:hover {
+#resources a:hover, #archive a:hover, #prime a:hover {
     color: #ff5733;
     text-decoration: underline;
 }
@@ -240,6 +244,42 @@ html {
 #address_section a:hover, #reminders a :hover {
     color: #ff5733; /* Change color on hover */
     text-decoration: none; /* Optionally add underline on hover */
+}
+
+#prime {
+    padding: 50px 20px;
+}
+
+.prime-container {
+    display: flex;
+    justify-content: space-between; /* Adjusts spacing between columns */
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    gap: 20px; /* Spacing between columns */
+}
+
+.prime-column {
+    flex: 1;
+    min-width: 300px; /* Adjust the minimum width of each column */
+    padding: 10px;
+    /* border: 1px solid #ddd; Optional border for better visual separation */
+}
+
+.prime-column h2 {
+    margin-top: 0;
+}
+
+.prime-column h3 {
+    margin-top: 0px;
+}
+
+.prime-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.prime-column ul li {
+    margin-bottom: 0px;
 }
 
 #archive {
