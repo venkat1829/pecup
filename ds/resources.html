@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEC.UP</title>
+    <!-- Content Security Policy Meta Tag -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com;
+    style-src 'self' 'unsafe-inline';
+    img-src 'self';
+    connect-src 'self' https://www.google-analytics.com;
+    object-src 'self';
+    "> -->
+    <link rel="stylesheet" href="/css/nav_styles.css">
+    <link rel="stylesheet" href="/css/scrooling_text.css">
+    <link rel="stylesheet" href="/css/watermark.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- <script src="scripts/script.js"></script> -->
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Favicon for different sizes -->
+    <link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicon-192x192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="/images/favicon-512x512.png" sizes="512x512" type="image/png">
+    <!-- Apple Touch Icon for Safari bookmarks -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQ8G7RBY0H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MQ8G7RBY0H');
+    </script>
+
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function (OneSignal) {
+            await OneSignal.init({
+                appId: "961b2ded-f286-45bb-a843-cfec615f565c",
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo" id="pecup">PEC.UP</a>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                &#9776; <!-- Hamburger icon -->
+            </button>
+            <ul class="nav-links">
+                <li class="large-gap"><a href="index.html">&#8962 Home</a></li>
+                <li class="large-gap"><a href="reminder.html">&#128197 Reminders</a></li>
+                <li class="large-gap"><a href="resources.html">&#128221 Resources</a></li>
+                <li class="large-gap"><a href="archive.html">&#128193 Archive</a></li>
+                <li class="linkedin-button"><a href="https://www.linkedin.com/in/yeswanth-madasu-41525b297/"
+                        target="_blank">Linkedin</a></li>
+
+            </ul>
+            <!-- <li class="linkedin-button"><a href="https://www.linkedin.com/in/yeswanth-madasu-41525b297/" target="_blank">Linkedin</a></li> -->
+        </div>
+    </nav>
+
+    <!-- <div class="scrolling-text">
+        <p>విద్యా దానసంపన్నా సుస్మితం సదా సుశీలమైనా।
+            బ్రహ్మరూపమయా తిష్టా శాంతి వర్ధంతి కిలా సప్తస్వరైర్భువి శాస్త్రి శ్రీప్రేమన్ సజీవశేఖరం,
+            సుకవిని విద్యార్హం దేవాస్సంపత్ సిద్ధిః పమంతా</p>
+    </div> -->
+
+    <section id="hero">
+        <div class="hero-content text-container">
+            <div class="animated-text">
+                <h1 id="typing-heading"></h1>
+            </div>
+            <a href="#resources" class="btn-project">resources?</a>
+
+            <p class="centered-text">pickup by
+                <span class="pickup">PEC.UP</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- <section id="imp">
+        <h2>🌿 Wishing You a Joyous Vinayaka Chavithi! ✨</h2>
+        <p>On this sacred occasion of Vinayaka Chavithi, PECUP extends its heartfelt wishes for a day filled with devotion, joy, and harmony. 🕉️✨</p>
+        <p>May Lord Ganesha, the symbol of wisdom and prosperity, bless us all with strength to overcome challenges, and inspire us to continue uplifting our communities. Together, let’s work towards a world where progress, equality, and empowerment thrive! 🌱🤝</p>
+
+        <p>May His blessings light our way towards success and fulfillment! 🌟</p>
+        <p>Happy Vinayaka Chavithi!</p>
+        <h4>- Team PECUP</h4>
+    </section> -->
+
+    <!-- <section id="home">
+        <h2>Home</a></h2>
+        <p>Welcome to our website, where we provide a range of useful study resources to support your academic journey.
+        </p>
+
+        <p>We offer previous year question papers for various examinations, including mid-semester exams (Mid-1, Mid-2),
+            regular semester exams under the R23 regulations.</p>
+
+        <a href="https://drive.google.com/file/d/1Eb7b2CQld4TMW9PuMEwOuqv3FRVWKpVe/view?usp=sharing" target="_blank">
+            &rArr; Syllabus</a>
+        <a href="https://drive.google.com/file/d/14gvhgwBn9uVNwKUJznPH0AH7HvqaQzjs/view?usp=sharing" target="_blank">
+            &rArr; Day Schedule</a>
+        <a href="https://drive.google.com/file/d/1AHJQ8HReGUII1LU7CRDBfaF_MOmO7Wab/view?usp=sharing" target="_blank">
+            &rArr; Sem Timetable</a>
+        <a href="https://drive.google.com/file/d/16tTbTftR7MItkie2N8IqHrSXBMSd2AfM/view?usp=share_link" target="_blank">
+            &rArr; Lab Externals Timetable</a>
+        <a href="https://drive.google.com/file/d/1plqNtFOTnABzCc-OTkoV6SaL31ZbHL8t/view?usp=sharing" target="_blank">
+            &rArr; Mid 2 Timetable</a>
+        <a href="https://drive.google.com/file/d/183uqMn5IucmVzHwCx0D4-ARwehqZuC_P/view?usp=sharing" target="_blank">
+            &rArr; Mid 1 Timetable</a>
+
+        <p>Our offerings include:</p>
+        <ul>
+            <li><strong>Previous Year Question Papers:</strong> Mid-1, Mid-2 exams, regular semester exams, and
+                supplementary exams (R23 regulations).</li>
+            <li><strong>Study Materials:</strong> Comprehensive notes and guides.</li>
+            <li><strong>Assignment Questions with Answers:</strong> Assignments from various subjects, with solutions
+                when available.</li>
+            <li><strong>Record Manuals:</strong> Lab records and practical manuals.</li>
+        </ul>
+
+        <p>Our resources are well-organized to help you find what you need efficiently.</p>
+
+    </section> -->
+
+    <section id="prime">
+        <h1>Prime Resources</h1>
+            <p>This section is designed to provide easy access to essential exam resources:</p>
+            <a href="https://drive.google.com/file/d/1Ct-WUYsoJlB3nHoOvaqvlRO9w1Qqv3aC/view?usp=sharing" target="_blank" style="color: #ff5733;">
+                &rArr; DLCO Model Paper</a>
+            <a href="https://drive.google.com/file/d/1Eb7b2CQld4TMW9PuMEwOuqv3FRVWKpVe/view?usp=sharing" target="_blank" style="color: #ff5733;">
+                &rArr; Syllabus</a>
+            
+            <a href="https://drive.google.com/file/d/1AHJQ8HReGUII1LU7CRDBfaF_MOmO7Wab/view?usp=sharing" target="_blank" style="color: #ff5733;">
+                &rArr; Sem Timetable</a>
+            <ul>
+                <li><strong>Notes:</strong> Comprehensive and well-structured study materials.</li>
+                <li><strong>Assignments:</strong> Subject-specific questions with solutions, where available.</li>
+                <li><strong>Past Papers:</strong> Previous year question papers for thorough practice.</li>
+                <li><strong>Reference Materials:</strong> Additional guides to enhance understanding.</li>
+            </ul>
+
+        <p id="deadline1">
+            <strong>DLCO</strong> Sem Exam : 25 November 2024
+            <span class="countdown" id="countdown3"></span>
+        </p>
+        <div class="prime-container">
+            <div class="prime-column">
+                <h3>Notes</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1BhDoSn1ovPdiN4VT0iHoSnawpHUJiVaU/view?usp=sharing"
+                            target="_blank">Unit 1</a></li>
+                    <li><a href="https://drive.google.com/file/d/1FJIEvxeY_gdgoj16MbRtL7sMkMwdWx1A/view?usp=sharing"
+                            target="_blank">Unit 2</a></li>
+                    <li><a href="https://drive.google.com/file/d/1insbSzqB30Prvxb3r5szfArbAF-9Pi41/view?usp=sharing"
+                            target="_blank">Unit 3</a></li>
+                    <li><a href="https://drive.google.com/file/d/1ilvo4JhwTi1aP3hDhDT6rPCX-Yan5fqv/view?usp=share_link"
+                            target="_blank">Unit 4</a></li>
+                    <li><a href="https://drive.google.com/file/d/1il6-m6K6w_D47heOk3XXDZFfEWNEhZcI/view?usp=sharing"
+                            target="_blank">Unit 5</a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="prime-column">
+                <h3>Assignments</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/11kC6-Djg3hAjdXzJqI2Py7uwFP6n6ylK/view?usp=sharing"
+                            target="_blank">Assignment 1</a></li>
+                    <li><a href="https://drive.google.com/file/d/1qUVwgxP85GR1Ev-rDGJOd73b8zuzMoaM/view?usp=share_link"
+                            target="_blank">Assignment 2</a></li>
+                    <li><a href="https://drive.google.com/file/d/1j4bqtmiS1Xdgt3Yo_iF5emS8zrOMghA6/view?usp=share_link"
+                            target="_blank">Assignment 3</a></li>
+                    <li><a href="https://drive.google.com/file/d/1j9mSd4nJ8Z7empBUlqgckFl6ySM54pyb/view?usp=sharing"
+                            target="_blank">Assignment 4</a></li>
+                    <li><a href="https://drive.google.com/file/d/1ovapcmpIKlgjrwMkHyk8dwzDe2SVzRTX/view?usp=sharing"
+                            target="_blank">Assignment 5</a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="prime-column">
+                <h3>Papers</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/164tbdjenBlGeQQmTkzPhjhqBfh6Ow6V1/view?usp=share_link"
+                            target="_blank">Mid 1</a></li>
+                    <li><a href="https://drive.google.com/file/d/16iBfYTeDqLhG8J1dF3E5XIQbIANxrJTP/view?usp=share_link"
+                            target="_blank">Mid 2</a></li>
+                    <li><a href="https://drive.google.com/file/d/1h1IPhPNsCHYvJMkoVQLEd9g2k-str5SX/view?usp=share_link"
+                            target="_blank">Previous Year Papers</a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="prime-column">
+                <h3 id="ref">References</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1Ct-WUYsoJlB3nHoOvaqvlRO9w1Qqv3aC/view?usp=sharing"
+                            target="_blank">DLCO Model Paper</a></li>
+                    <li><a href="https://drive.google.com/file/d/1mnFVS62eH_KSL8Y7AG8CT2nkkk8SYg4a/view?usp=share_link"
+                            target="_blank">Reference Q's Paper</a></li>
+                    <br>
+                </ul>
+            </div>
+        </div>
+        <p>Our resources are well-organized to help you find what you need efficiently.</p>
+    </section>
+    <div style="height: 50px;"></div> <!-- Spacer -->
+
+    <section id="reminders">
+        <h2>Reminders</h2>
+        <div id="reminder-text">
+            <ul>
+                <p>Previous Year Papers were uploaded here : <a href="#previous">Previous.Papers</a>
+                <br>Due to regulations, exact subjects were not available.</p>
+                <p>Mid 1, Mid 2 Papers of Year 2 Sem 1 Are Uploaded here :<a href="#tests">Papers</a></p>
+            </ul>
+        </div>
+        <h2>Deadlines</h2>
+        <ul>
+            <p id="deadline1">
+                Sem Examinations Starts: 20 November 2024
+                <span class="countdown" id="countdown1"></span>
+            </p>
+            <p id="deadline2">
+                Sem Examinations Ends: 29 November 2024
+                <span class="countdown" id="countdown2"></span>
+            </p>
+        </ul>
+    </section>
+
+    <div style="height: 20px;"></div> <!-- Spacer -->
+
+    <section id="resources">
+        <h1>Resources</h1>
+        <div>
+            <h4>
+                <a href="#notes">Notes</a>&nbsp;&nbsp;
+                <a href="#assignments">Assignments</a>&nbsp;&nbsp;
+                <a href="#tests">Papers</a>&nbsp;&nbsp;
+                <a href="#records">Records</a>&nbsp;&nbsp;
+            </h4>
+        </div>
+        <div class="resources-container">
+            <div class="resources-column">
+                <h2 id="notes">Notes
+                    <span><a href="#resources">!</a></span>
+                </h2>
+                <h3>Unit 1</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1JT2ciWwgF2c-BO1fabbyByeL_l3PXd_4/view?usp=sharing"
+                            target="_blank">DMGT</a></li>
+                    <li><a href="https://drive.google.com/file/d/1F1Xzi8SkGvjddH6mJP8AiZrn9js_yUy_/view?usp=sharing"
+                            target="_blank">ADS</a></li>
+                    <li><a href="https://drive.google.com/file/d/15ghqP5Ws-qx3Url1uF_ChdfQk5FNidyl/view?usp=sharing"
+                            target="_blank">JAVA</a></li>
+                    <li><a href="https://drive.google.com/file/d/1BhDoSn1ovPdiN4VT0iHoSnawpHUJiVaU/view?usp=sharing"
+                            target="_blank">DLCO</a></li>
+                    <li><a href="https://drive.google.com/file/d/12Pc54j_bBcYH6K-GAqdYuGNHWMrsTxgI/view?usp=sharing"
+                            target="_blank">UHV</a></li>
+                    <br>
+                </ul>
+                <h3>Unit 2</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1DYCjZ31IYQLlbUW9HSBUOuL_FxcJU0Vs/view?usp=sharing"
+                            target="_blank">DMGT</a></li>
+                    <li><a href="https://drive.google.com/file/d/1F2xxusTYfUGjBtEXRXujyjzVQRnZYY23/view?usp=drivesdk"
+                            target="_blank">ADS</a></li>
+                    <li><a href="https://drive.google.com/file/d/1FEkBMdydpvQ-MuKMcVplZLagpze-j_Yc/view?usp=sharing"
+                            target="_blank">JAVA</a></li>
+                    <li><a href="https://drive.google.com/file/d/1FJIEvxeY_gdgoj16MbRtL7sMkMwdWx1A/view?usp=sharing"
+                            target="_blank">DLCO (Upto 22/08/24)</a></li>
+                    <li><a href="https://drive.google.com/file/d/1EP4j8XBprgcPkEGVvUbe5LTjtqGFT8YV/view?usp=sharing"
+                            target="_blank">UHV</a></li>
+                    <br>
+                </ul>
+                <h3>Unit 3</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1qAtyHjKVfBcAnuvKE6fTgP5JD1__TqJP/view?usp=sharing"
+                            target="_blank">DMGT</a></li>
+                    <li><a href="https://drive.google.com/file/d/117Kmm6STTEuDmc490uSKNJRjJtX0tWJr/view?usp=sharing"
+                            target="_blank">ADS</a></li>
+                    <li><a href="https://drive.google.com/file/d/1a7GNnRqkz8IiVMIXEEYg7KEFlBkf3RvS/view?usp=sharing"
+                            target="_blank">JAVA</a></li>
+                    <li><a href="https://drive.google.com/file/d/1insbSzqB30Prvxb3r5szfArbAF-9Pi41/view?usp=sharing"
+                            target="_blank">DLCO</a></li>
+                    <li><a href="https://drive.google.com/file/d/1qFu-HH9v6CbUO8wLm9vdjK477bf21bgh/view?usp=sharing"
+                            target="_blank">UHV</a></li>
+                    <br>
+                </ul>
+                <h3>Unit 4</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/11Z97VZ70LTj4ZFFQtxbu28p21vi4eliG/view?usp=share_link"
+                            target="_blank">DMGT 4&5 </a></li>
+                    <li><a href="https://drive.google.com/file/d/16zqY5w90TdMY85GJpyq6JjrwFcHrcVUl/view?usp=share_link"
+                            target="_blank">ADS</a></li>
+                    <li><a href="https://drive.google.com/file/d/1pa_xgeBM0zWc5vdJgJ8VS4BVPekrwmQr/view?usp=sharing"
+                            target="_blank">JAVA</a></li>
+                    <li><a href="https://drive.google.com/file/d/1ilvo4JhwTi1aP3hDhDT6rPCX-Yan5fqv/view?usp=share_link"
+                            target="_blank">DLCO</a></li>
+                    <li><a href="https://drive.google.com/file/d/1pLk6YrVIvg2xv3A-xK3N9cAWGlUIJ7wv/view?usp=sharing"
+                            target="_blank">UHV</a></li>
+                    <br>
+                </ul>
+                <h3>Unit 5</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/11Z97VZ70LTj4ZFFQtxbu28p21vi4eliG/view?usp=share_link"
+                            target="_blank">DMGT 4&5 </a></li>
+                    <li><a href="https://drive.google.com/file/d/11IeuuX7h9st6p2fGxP6V8zHRg8hIJ6gm/view?usp=sharing"
+                            target="_blank">ADS</a></li>
+                    <li><a href="https://drive.google.com/file/d/1pj5WwMWrUkMeXkMmGCoygMfNWaLm3ObM/view?usp=sharing"
+                            target="_blank">JAVA</a></li>
+                    <li><a href="https://drive.google.com/file/d/1il6-m6K6w_D47heOk3XXDZFfEWNEhZcI/view?usp=sharing"
+                            target="_blank">DLCO</a></li>
+                    <li><a href="https://drive.google.com/file/d/1pP2L4nYQIwvbqs-Hdnr97AviCVQ7jfFs/view?usp=sharing"
+                            target="_blank">UHV</a></li>
+                    <br>
+                </ul>
+                <h3 id="study">Study Materials</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1cTY0dlPM1S0esW2dIq-WHlhg0-mRQx0m/view?usp=share_link"
+                            target="_blank">DMGT  All Units</a></li>
+                        <br>
+                    <li><a href="https://drive.google.com/file/d/1D2tQiSlgxwehmSOpUqdaycGDN8a_9sZ0/view?usp=share_link"
+                            target="_blank">ADS All Units</a></li>
+                    <br>
+                    <li><a href="https://drive.google.com/file/d/1G2lMNrviZCPX-FMakCgW8wyOEulRoY_M/view?usp=share_link"
+                            target="_blank">JAVA All Units</a></li>
+                    <br>
+                    <li><a href="https://drive.google.com/file/d/1LRd3ZvKiEHD6iovd3yIFnuxCBNX_ioZy/view?usp=sharing"
+                            target="_blank">ES All Units </a></li>
+                    <br>
+                </ul>
+                <!-- <h3>Unit 4</h3>
+                <ul>
+                    <li>LA&C</li>
+                    <li>ICP</li>
+                    <li>Chemistry</li>
+                    <li>BEEE</li>
+                    <li>EG</li>
+                    <br>
+                </ul> -->
+            </div>
+            <div class="resources-column">
+                <h2 id="assignments">Assignments
+                    <span><a href="#resources">!</a></span>
+                </h2>
+                <h3>Assignment 1</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/11m5oM2Ukwzf7m8Z5sQV6Fass89vHlaPy/view?usp=sharing"
+                            target="_blank">DMGT</a></li>
+                    <li><a href="https://drive.google.com/file/d/11_6UneR9rA8n3iWK5TtUEkrJbh75u1I-/view?usp=sharing"
+                            target="_blank">ADS</a></li>
+                    <li><a href="https://drive.google.com/file/d/16Ul7m0grIGZTVjj7KGq7-_DK7KCu7sTB/view?usp=sharing"
+                            target="_blank">JAVA</a></li>
+                    <li><a href="https://drive.google.com/file/d/1e0j83JXfXYz4L8DHdjKaSwO6b6DmgXNT/view?usp=sharing"
+                            target="_blank">JAVA (Extra Reference)</a></li>
+                    <li><a href="https://drive.google.com/file/d/11kC6-Djg3hAjdXzJqI2Py7uwFP6n6ylK/view?usp=sharing"
+                            target="_blank">DLCO</a></li>
+                    <li><a href="https://drive.google.com/file/d/127ddB5e2EJwZvqEGcJDAaLoQcKAsQIvw/view?usp=sharing"
+                            target="_blank">UHV</a></li>
+                    <br>
+                </ul>
+                <h3>Assignment 2</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1Lk6yASPwzzbpUxg49r7bfoZ-a7JUGEQc/view?usp=sharing"
+                            target="_blank">DMGT</a></li>
+                    <li><a href="https://drive.google.com/file/d/1Do8A7KR3lUL87ce-iaGYYqxDCqVOa6am/view?usp=sharing"
+                            target="_blank">ADS</a></li>
+                    <li><a href="https://drive.google.com/file/d/1BJVD32ofYTTXuMczZ5oDP3Guyq-FJVR2/view?usp=sharing"
+                            target="_blank">JAVA</a></li>
+                    <li><a href="https://drive.google.com/file/d/1qUVwgxP85GR1Ev-rDGJOd73b8zuzMoaM/view?usp=share_link"
+                            target="_blank">DLCO</a></li>
+                    <li><a href="https://drive.google.com/file/d/1Lmfn5LNWakkTD0YQGHpJB-eXz9987Cld/view?usp=sharing"
+                            target="_blank">UHV</a></li>
+                    <br>
+                </ul>
+                <h3>Assignment 3</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/11btjtUouhUg_8-EuTg69wqZJlzrPXzus/view?usp=share_link"
+                            target="_blank">DMGT</a></li>
+                    <li><a href="https://drive.google.com/file/d/1jA7861JrHoQmByCkFgKBSZPLf-iBTBud/view?usp=share_link"
+                            target="_blank">ADS</a></li>
+                    <li><a href="https://drive.google.com/file/d/1jDWSE5lxnC3LkhNPna7F7ZiWmQtY_SPo/view?usp=share_link"
+                            target="_blank">JAVA</a></li>
+                    <li><a href="https://drive.google.com/file/d/1j4bqtmiS1Xdgt3Yo_iF5emS8zrOMghA6/view?usp=share_link"
+                            target="_blank">DLCO</a></li>
+                    <li><a href="https://drive.google.com/file/d/1qIErIRPdNRX8xA6bQGppRJdnbLKy13lj/view?usp=sharing"
+                            target="_blank">UHV</a></li>
+                    <br>
+                </ul>
+                <h3>Assignment 4</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1inAvt3ts1uz-sp7lYmclD5fC17dYHU1D/view?usp=sharing"
+                            target="_blank">DMGT</a></li>
+                    <li><a href="https://drive.google.com/file/d/1175eTUmzzaW73ZlYTlogM1L7V-wJu9uB/view?usp=sharing"
+                            target="_blank">ADS</a></li>
+                    <li><a href="https://drive.google.com/file/d/110GA1Ho1TBPOEGzqV1vXcOYByWT6aNg9/view?usp=sharing"
+                            target="_blank">JAVA</a></li>
+                    <li><a href="https://drive.google.com/file/d/1j9mSd4nJ8Z7empBUlqgckFl6ySM54pyb/view?usp=sharing"
+                            target="_blank">DLCO</a></li>
+                    <li><a href="https://drive.google.com/file/d/1puS2EzyanPzIP5UH2Isc5BrYwizp7neV/view?usp=sharing"
+                            target="_blank">UHV</a></li>
+                    <br>
+                </ul>
+                <h3>Assignment 5</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1q7VQ763ciyZ2IKUtFPCZBKIHDBtrNEUz/view?usp=sharing"
+                            target="_blank">DMGT</a></li>
+                    <li><a href="https://drive.google.com/file/d/11Sa8NY7MCb3BUmJUuWjtUjv4W2nixGL0/view?usp=sharing"
+                            target="_blank">ADS</a></li>
+                    <li><a href="https://drive.google.com/file/d/110Vi5s7j7to1iuRWbdqzDpky1rzdIbdw/view?usp=sharing"
+                            target="_blank">JAVA</a></li>
+                    <li><a href="https://drive.google.com/file/d/1ovapcmpIKlgjrwMkHyk8dwzDe2SVzRTX/view?usp=sharing"
+                            target="_blank">DLCO</a></li>
+                    <li><a href="https://drive.google.com/file/d/1pw8cMztvrFO0EstBc9FzrHiBNnyYqPaD/view?usp=sharing"
+                            target="_blank">UHV</a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="resources-column">
+                <h2 id="tests">Papers
+                    <span><a href="#resources">!</a></span>
+                </h2>
+                <h3>Mid 1</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/166auHLWcYIhB58321PPXli3O5f9N39XS/view?usp=share_link"
+                            target="_blank">DMGT</a></li>
+                    <li><a href="https://drive.google.com/file/d/1W0dvsVeIXAnORa8ON0fvjRpuEyaBLXPa/view?usp=share_link"
+                            target="_blank">ADS</a></li>
+                    <li><a href="https://drive.google.com/file/d/164qoMKJciLI8jYoiHZ4P8708dBwDXw1t/view?usp=share_link"
+                            target="_blank">JAVA</a></li>
+                    <li><a href="https://drive.google.com/file/d/164tbdjenBlGeQQmTkzPhjhqBfh6Ow6V1/view?usp=share_link"
+                            target="_blank">DLCO</a></li>
+                    <li><a href="https://drive.google.com/file/d/16BSfbjKnh-ul8HLyfvzs0y_97jCrDOix/view?usp=share_link"
+                            target="_blank">UHV</a></li>
+                    <br>
+                </ul>
+                <h3>Mid 2</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/16alml9_DKKL4-NS3tjGsMGi5mOGSUsmF/view?usp=share_link"
+                            target="_blank">DMGT</a></li>
+                    <li><a href="https://drive.google.com/file/d/16DQrNtUJb8SGF31NqN6aV-ZuPgXV3bi0/view?usp=share_link"
+                            target="_blank">ADS</a></li>
+                    <li><a href="https://drive.google.com/file/d/16VK4hY51ArXEucYbF9C_fgqg02GfC-JL/view?usp=share_link"
+                            target="_blank">JAVA</a></li>
+                    <li><a href="https://drive.google.com/file/d/16iBfYTeDqLhG8J1dF3E5XIQbIANxrJTP/view?usp=share_link"
+                            target="_blank">DLCO</a></li>
+                    <li><a href="https://drive.google.com/file/d/16PfSjzL7fdMqur3hKUv-sUydxt-o978a/view?usp=share_link"
+                            target="_blank">UHV</a></li>
+                    <br>
+                </ul>
+                <h3 id="previous">Previous Papers </h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1lHcJhYKLfH18fwUNBbgBnewoiS8bNOKN/view?usp=share_link"
+                            target="_blank">DMGT (MFCS) </a></li>
+                    <li><a href="https://drive.google.com/file/d/1Z-PE8kHI0T65fxMnkPzUp12atUMnvw9E/view?usp=share_link"
+                            target="_blank">ADS</a></li>
+                    <li><a href="https://drive.google.com/file/d/1OCNw55qfCc-8h9XJzWjAxa75x9TILbkv/view?usp=share_link"
+                            target="_blank">JAVA</a></li>
+                    <li><a href="https://drive.google.com/file/d/1h1IPhPNsCHYvJMkoVQLEd9g2k-str5SX/view?usp=share_link"
+                            target="_blank">DLCO</a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="resources-column">
+                <h2 id="records">Records
+                    <span><a href="#resources">!</a></span>
+                </h2>
+                <h3>Week 1-4</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/13A9Zai6ClRzWgYwLN-dwWdqxLEvzmo33/view?usp=sharing"
+                            target="_blank">Python</a></li>
+                    <li><a href="https://drive.google.com/file/d/13CLlJIH4w17YX-4RM8RinmF_snnGqimx/view?usp=sharing"
+                            target="_blank">JAVA</a></li>
+                    <li><a href="https://drive.google.com/file/d/13GVOlehybqTRRdE7lxyQ7JAFCAvVaM5V/view?usp=sharing"
+                            target="_blank">ADS</a></li>
+                    <br>
+                </ul>
+                <h3>Week</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1B1Xo1SYGyHmj60lRECPvDTKRuqc6BK-u/view?usp=sharing"
+                            target="_blank">Python w3</a></li>
+                    <li><a href="https://drive.google.com/file/d/1BANOSeqArbEGj6aYKgtTepc5cpwyb78-/view?usp=sharing"
+                            target="_blank">JAVA w5</a></li>
+                    <li><a href="https://drive.google.com/file/d/1B9BnRPGU68yxFFaE7QHFv-GjlOgL9dE4/view?usp=sharing"
+                            target="_blank">ADS w5</a></li>
+                    <br>
+                </ul>
+                <!-- <h3>Week 3</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">Python</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">JAVA</a></li>
+                    <li><a href="https://drive.google.com/file/d/1GWYEbzV6ZAzSM1zVh94fthp5ZdvstjZr/view?usp=sharing" target="_blank">Adsa</a></li>
+                    <br>
+                </ul> -->
+            </div>
+        </div>
+    </section>
+
+    <div style="height: 20px;"></div> <!-- Spacer -->
+
+    <section id="archive">
+        <h1>Archive</h1>
+        <div class="archive-container">
+            <div class="archive-column">
+                <h2>Year 1 Sem 1</h2>
+                <h3>Mid 1</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1UQClxGFsJh5j8_YUx-KU_XrfAOWi2CRy/view?usp=sharing"
+                            target="_blank">LA&C</a></li>
+                    <li><a href="https://drive.google.com/file/d/1gTuubrednzSOOjToqgeRcSZBxtQ43Cvz/view?usp=sharing"
+                            target="_blank">ICP</a></li>
+                    <li><a href="https://drive.google.com/file/d/13zKxCEmzhiivwhIbfdnoxIK9I3WqyE77/view?usp=sharing"
+                            target="_blank">PHY</a></li>
+                    <li><a href="https://drive.google.com/file/d/13tdQkbwxZLICDFWgDSxICAkp2EARdVj_/view?usp=sharing"
+                            target="_blank">BEEE</a></li>
+                    <li><a href="https://drive.google.com/file/d/13V2anDlBLRUc98ou_S20w3SspLameU0o/view?usp=sharing"
+                            target="_blank">EG</a></li>
+                    <br>
+                </ul>
+                <h3>Mid 2</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1XOiarb4P_Gd1ShvrxQzFVrWrXEGZF4Fy/view?usp=sharing"
+                            target="_blank">LA&C</a></li>
+                    <li><a href="https://drive.google.com/file/d/1WtNgyTaiRo6eKiLMc3u9xDEgGsqvUWZU/view?usp=sharing"
+                            target="_blank">ICP</a></li>
+                    <li><a href="https://drive.google.com/file/d/16nRZsokHgfqex6Kz29e8st6zv8pMSugD/view?usp=share_link"
+                            target="_blank">PHY</a></li>
+                    <li><a href="https://drive.google.com/file/d/16ouH-gxx2GUaRTHo4WGude4eHq7DWhZb/view?usp=share_link"
+                            target="_blank">BEEE</a></li>
+                    <li><a href="https://drive.google.com/file/d/13Wav1A4-9xiRY15FXZ-zRJlLLudrg9Zk/view?usp=sharing"
+                            target="_blank">EG</a></li>
+                    <br>
+                </ul>
+                <h3>Sem 1</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1smN6zp2hpiUdRDwgthXijx58STJACauU/view?usp=sharing"
+                            target="_blank">LA&C</a></li>
+                    <li><a href="https://drive.google.com/file/d/1ZxNkfShkb651hLu2GDwpliW53ZrMv0Cu/view?usp=sharing"
+                            target="_blank">ICP</a></li>
+                    <li><a href="https://drive.google.com/file/d/13pqoFbB84BSDe4ON8dYZ1ihFDTGjp1dz/view?usp=sharing"
+                            target="_blank">PHY</a></li>
+                    <li><a href="https://drive.google.com/file/d/13flD3c2QNNTu5Dcwf6mWUpov8aqXyXFJ/view?usp=sharing"
+                            target="_blank">BEEE</a></li>
+                    <li><a href="https://drive.google.com/file/d/13hfEUwzFYgPI5E_sZaEsHfUO3p1b-1zw/view?usp=sharing"
+                            target="_blank">EG</a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="archive-column">
+                <h2>Year 1 Sem 2</h2>
+                <h3>Mid 1</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1wDIE5-0Roxb9siQLmItCHcfJcvmvDT9y/view?usp=sharing"
+                            target="_blank">DEVC</a></li>
+                    <li><a href="https://drive.google.com/file/d/1FeIsK5PyQmafgCu1wg12-opg9NW7zwe2/view?usp=sharingx"
+                            target="_blank">DS</a></li>
+                    <li><a href="https://drive.google.com/file/d/1B8eGNdmFwSyL3qHFLO8BhZDdxi64pxlI/view?usp=sharing"
+                            target="_blank">CHEM</a></li>
+                    <li><a href="https://drive.google.com/file/d/1RVg8TRdv_ryIRsTMg7qB089yjj3vtFz6/view?usp=sharing"
+                            target="_blank">BCME</a></li>
+                    <li><a href="https://drive.google.com/file/d/1DnkGoLb6a49NsC1owujUa8ADEQx7DFV9/view?usp=sharing"
+                            target="_blank">CE</a></li>
+                    <br>
+                </ul>
+                <h3>Mid 2</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/13hgJcbn9XPI_aVYCSbHRpcppCuug1rXg/view?usp=sharing"
+                            target="_blank">DEVC</a></li>
+                    <li><a href="https://drive.google.com/file/d/13vSCJ32wI6nwA_wcHQMZMMVOGfpTT48p/view?usp=sharing"
+                            target="_blank">DS</a></li>
+                    <li><a href="https://drive.google.com/file/d/11qkU3B6EF8X4-jQ7ySVNrHXwTyATtoI_/view?usp=sharing"
+                            target="_blank">CHEM</a></li>
+                    <li><a href="https://drive.google.com/file/d/1V0i8EQedxBogMLIRdA9leEsMZBcgbNE8/view?usp=sharing"
+                            target="_blank">BCME</a></li>
+                    <li><a href="https://drive.google.com/file/d/141eVMuvU1Nm2txzliH9rT98tDPRjs2vp/view?usp=sharing"
+                            target="_blank">CE</a></li>
+                    <br>
+                </ul>
+                <h3>Sem 2</h3>
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1ZuoW6QBRHbtO5hFWpW1xMG2QdCs-XJO3/view?usp=sharing"
+                            target="_blank">DEVC</a></li>
+                    <li><a href="https://drive.google.com/file/d/1R_lLX_MUTfRlbq-9rruk2kxLCv-5cHW5/view?usp=sharing"
+                            target="_blank">DS</a></li>
+                    <li><a href="https://drive.google.com/file/d/14Xf3BhlCWvB1vayqPWD5aul3tQYKRhKw/view?usp=sharing"
+                            target="_blank">CHEM</a></li>
+                    <li><a href="https://drive.google.com/file/d/1REPtkzY1BsibXQyE8m_73R-IB5S3PtmC/view?usp=sharing"
+                            target="_blank">BCME</a></li>
+                    <li><a href="https://drive.google.com/file/d/1N9KojCq8YzebZg9FEhnNU2BmaftRJDgv/view?usp=sharing"
+                            target="_blank">CE</a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="archive-column">
+                <!-- <h2>Year 2 Sem 1</h2>
+                <h3>Mid 1</h3>
+                <ul>
+                    <li>LA&C</li>
+                    <li>ICP</li>
+                    <li>Chemistry</li>
+                    <li>BEEE</li>
+                    <li>EG</li>
+                    <br>
+                </ul>
+                <h3>Mid 2</h3>
+                <ul>
+                    <li>LA&C</li>
+                    <li>ICP</li>
+                    <li>Chemistry</li>
+                    <li>BEEE</li>
+                    <li>EG</li>
+                    <br>
+                </ul>
+                <h3>Sem 1</h3>
+                <ul>
+                    <li>LA&C</li>
+                    <li>ICP</li>
+                    <li>Chemistry</li>
+                    <li>BEEE</li>
+                    <li>EG</li>
+                    <br>
+                </ul> -->
+            </div>
+            <div class="archive-column">
+                <!-- <h2>Year 2 Sem 2</h2>
+                <h3>Mid 1</h3>
+                <ul>
+                    <li>LA&C</li>
+                    <li>ICP</li>
+                    <li>Chemistry</li>
+                    <li>BEEE</li>
+                    <li>EG</li>
+                    <br>
+                </ul>
+                <h3>Mid 2</h3>
+                <ul>
+                    <li>LA&C</li>
+                    <li>ICP</li>
+                    <li>Chemistry</li>
+                    <li>BEEE</li>
+                    <li>EG</li>
+                    <br>
+                </ul>
+                <h3>Sem 2</h3>
+                <ul>
+                    <li>LA&C</li>
+                    <li>ICP</li>
+                    <li>Chemistry</li>
+                    <li>BEEE</li>
+                    <li>EG</li>
+                    <br>
+                </ul> -->
+            </div>
+        </div>
+    </section>
+
+    <div style="height: 20px;"></div> <!-- Spacer -->
+
+    <section style="font-family: monospace;" id="archive" class="contacts">
+        <h1 id="contacts">Contacts</h1>
+        <div class="archive-container">
+            <div class="archive-column">
+                <h4>Work</h4>
+                <p>Yeswanth Madasu</p>
+                <p>2nd Year CSE-B</p>
+                <p><a href="https://www.linkedin.com/in/yeswanth-madasu-41525b297/" target="_blank">Linkedin</a></p>
+                <p><a href="mailto:work.pecup@gmail.com">Work Mail</a></p>
+            </div>
+            <div class="archive-column">
+                <h4>Work</h4>
+                <p>Venkata Kumar Geddada</p>
+                <p>2nd Year CSE-B</p>
+                <a href="https://www.linkedin.com/in/venkatakumar-g-9349852a4/" target="_blank">linkedin</a>
+            </div>
+            <div class="archive-column">
+                <h4>Work</h4>
+                <p>Kavya Sri</p>
+                <p>2nd Year CSE-B</p>
+            </div>
+        </div>
+        <h3><a href="https://wa.me/919676242565" target="_blank">Request Resources</a></h3>
+    </section>
+
+    <div class="overlay-container">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="overlay-button">
+            <img src="images/dots.gif" alt="Home" class="menu-icon" />
+        </label>
+
+        <div class="menu">
+            <!-- <a href="#home"><p class="menu-icon">&#8962</p></a> -->
+            <a href="#top"><img src="images/home.gif" alt="Home" class="menu-icon" /></a>
+            <a href="#reminders"><img src="images/reminders.png" alt="Reminders" class="menu-icon" /></a>
+            <a href="#resources"><img src="images/document.png" alt="Resources" class="menu-icon" /></a>
+            <a href="#archive"><img src="images/folder.png" alt="Archive" class="menu-icon" /></a>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>Necessary</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="https://pragati.ac.in/" target="_blank">Pragati</a></li>
+                        <li><a href="https://sip.pragati.ac.in/" target="_blank">Student Portal</a></li>
+                        <li><a href="https://csepragati.com/" target="_blank">Coordinator Page</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column" id="address_section">
+                    <h3>Address</h3>
+                    <address>
+                        Pragati Engineering College <br>
+                        1-378,<br>
+                        ADB Road, Surampalem,<br>
+                        Peddapuram district<br>
+                        <a href="https://pragati.ac.in" target="_blank">website</a>
+                    </address>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#contacts">Contact</a></li>
+                        <li><a href="https://www.instagram.com/__yeswanth9/" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/yeswanth-madasu-41525b297/"
+                                target="_blank">Linkedin</a></li>
+                        <li><a href="mailto:sinchan123v@gmail.com">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;2024 Yeswanth Madasu. All rights reserved.</p>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const texts = ["Resources Section","Made for students, by students!"];
+        let count = 0;
+        let index = 0;
+        let currentText = '';
+        let letter = '';
+
+        (function type() {
+            if (count === texts.length) {
+                count = 0;
+            }
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+
+            document.getElementById('typing-heading').textContent = letter;
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+                setTimeout(type, 2000); // Pause before typing the next word
+            } else {
+                setTimeout(type, 150);
+            }
+        })();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            menuToggle.addEventListener('click', function () {
+                navLinks.classList.toggle('active');
+                // For debugging purposes, log the button click
+                console.log('Menu button clicked');
+            });
+        });
+
+    </script>
+
+    <script>
+        function updateCountdowns() {
+            const deadlines = {
+                "countdown1": new Date("2024-11-20"), // deadline 1
+                "countdown2": new Date("2024-11-29"), // deadline 2
+                "countdown3": new Date("2024-11-25"),
+            };
+
+            const today = new Date();
+            today.setHours(0, 0, 0, 0); // Set to start of the day
+
+            for (const [id, deadlineDate] of Object.entries(deadlines)) {
+                const timeDiff = deadlineDate - today;
+                const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)) - 1; // Subtract 1 to exclude today
+
+                // Update the HTML with the countdown
+                const countdownElement = document.getElementById(id);
+                if (daysLeft > 1) {
+                    countdownElement.textContent = ` [${daysLeft} days left]`;
+                } else if (daysLeft === 1) {
+                    countdownElement.textContent = ` [1 day left]`;
+                } else {
+                    countdownElement.textContent = ' [Deadline passed]';
+                }
+            }
+        }
+
+        // Run the function when the page loads
+        window.onload = updateCountdowns;
+    </script>
+
+</body>
+
+</html>

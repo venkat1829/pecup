@@ -123,3 +123,67 @@
         margin-top: 10px; /* Space it out from other items */
     }
 }
+
+
+/* Your existing CSS stays the same, add these new styles: */
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-toggle {
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1200;
+    border-radius: 4px;
+    padding: 8px 0;
+  }
+  
+  .dropdown-menu li {
+    margin: 0 !important;
+    padding: 0;
+  }
+  
+  .dropdown-menu a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1.6rem;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #333;
+  }
+  
+  /* Show dropdown on hover for desktop */
+  @media (min-width: 769px) {
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+  }
+  
+  /* Mobile dropdown styles */
+  @media (max-width: 951px) {
+    .dropdown-menu {
+      position: static;
+      background-color: #111;
+      box-shadow: none;
+      padding-left: 20px;
+    }
+    
+    /* Show/hide dropdown on click for mobile */
+    .dropdown.active .dropdown-menu {
+      display: block;
+    }
+  }
