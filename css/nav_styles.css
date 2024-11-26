@@ -125,65 +125,82 @@
 }
 
 
-/* Your existing CSS stays the same, add these new styles: */
-
-/* Dropdown styles */
 .dropdown {
-    position: relative;
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #000;
+  min-width: 160px; /* Default size for desktop */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1200;
+  border-radius: 20px; /* Rounded corners */
+  padding: 8px 0;
+  list-style-type: none; /* Remove bullets/circles */
+  margin: 0;
+  opacity: 0; /* Initially hidden */
+  max-height: 0; /* Initially collapse the menu */
+  visibility: hidden; /* Ensure the menu is hidden */
+  overflow: hidden; /* Hide overflow */
+  transition: opacity 0.3s ease, max-height 0.3s ease, visibility 0.3s ease; /* Smooth transitions */
+}
+
+.dropdown-menu li {
+  margin: 0 !important;
+  padding: 0;
+}
+
+.dropdown-menu a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 1.4rem;
+  transition: background-color 0.2s ease, color 0.2s ease; /* Smooth transition for hover effects */
+}
+
+/* Change text color on hover */
+.dropdown-menu a:hover {
+  background-color: #333;
+  color: #ff5733; /* New text color on hover */
+}
+
+/* Show dropdown on hover for desktop */
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-menu {
+    opacity: 1; /* Fade in */
+    max-height: 500px; /* Set max-height to a reasonable value for visibility */
+    visibility: visible; /* Make it visible */
   }
-  
-  .dropdown-toggle {
-    cursor: pointer;
-  }
-  
+}
+
+/* Mobile dropdown styles */
+@media (max-width: 951px) {
   .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #000;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1200;
-    border-radius: 4px;
-    padding: 8px 0;
+    position: static;
+    background-color: #111;
+    box-shadow: none;
+    padding-left: 12px; /* Reduced padding */
+    padding-right: 12px; /* Reduced padding */
+    border-radius: 20px; /* Rounded corners on mobile too */
+    margin-top: 8px;
+    max-height: 0; /* Initially hidden */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+    min-width: 120px; /* Reduced width for mobile version */
   }
-  
-  .dropdown-menu li {
-    margin: 0 !important;
-    padding: 0;
+
+  /* Show/hide dropdown on click for mobile */
+  .dropdown.active .dropdown-menu {
+    opacity: 1;
+    max-height: 300px; /* Adjust based on content height */
+    visibility: visible;
   }
-  
-  .dropdown-menu a {
-    color: #fff;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 1.6rem;
-  }
-  
-  .dropdown-menu a:hover {
-    background-color: #333;
-  }
-  
-  /* Show dropdown on hover for desktop */
-  @media (min-width: 769px) {
-    .dropdown:hover .dropdown-menu {
-      display: block;
-    }
-  }
-  
-  /* Mobile dropdown styles */
-  @media (max-width: 951px) {
-    .dropdown-menu {
-      position: static;
-      background-color: #111;
-      box-shadow: none;
-      padding-left: 20px;
-    }
-    
-    /* Show/hide dropdown on click for mobile */
-    .dropdown.active .dropdown-menu {
-      display: block;
-    }
-  }
+}
