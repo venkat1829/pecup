@@ -39,27 +39,31 @@
         gtag('config', 'G-MQ8G7RBY0H');
     </script>
 
-<!-- Add this HTML in your webpage to let users select their branch -->
-<div id="branch-selection" style="display: none;">
-    <label for="branch-select">Select your branch:</label>
-    <select id="branch-select">
-        <option value="CSE">CSE</option>
-        <option value="AIML">AIML</option>
-        <option value="AI">AI</option>
-    </select>
-    <button onclick="saveBranchPreference()">Save</button>
-</div>
+        <!-- Styled Branch Selection Prompt -->
+    <div id="branch-selection" class="selection-container" style="display: none;">
+        <label for="branch-select" class="selection-label">Please select your branch:</label>
+        <select id="branch-select" class="selection-dropdown">
+            <option value="CSE">CSE</option>
+            <option value="AIML">AIML</option>
+            <option value="AI">AI</option>
+        </select>
+        <!-- Button placed at the bottom of the container -->
+        <div class="button-container">
+            <button onclick="saveBranchPreference()" class="save-button">Save</button>
+        </div>
+    </div>
 
+    <!-- OneSignal SDK -->
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
         window.OneSignalDeferred = window.OneSignalDeferred || [];
         OneSignalDeferred.push(async function (OneSignal) {
             // Initialize OneSignal with your app ID
             await OneSignal.init({
-                appId: "bfc7303f-c469-47d7-a0fc-2627201968f0",
+                appId: "961b2ded-f286-45bb-a843-cfec615f565c",
             });
 
-            // Show the branch selection dropdown
+            // Show the branch selection prompt
             document.getElementById('branch-selection').style.display = 'block';
         });
 
@@ -79,6 +83,71 @@
         }
     </script>
 
+    <!-- Custom Styles -->
+    <style>
+        .selection-container {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(135, 132, 132, 0.5);
+            border-bottom: 1px solid rgba(135, 132, 132, 0.5);
+            border-right: 1px solid rgba(135, 132, 132, 0.5);
+            border-radius: 15px;
+            margin: 50px 12px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            justify-content: flex-end; /* Aligns items towards the bottom */
+            height: 300px; /* Adjust container height as needed */
+        }
+
+        .selection-label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .selection-dropdown {
+            padding: 12px;
+            font-size: 18px; /* Increased font size */
+            border-radius: 8px;
+            border: 1px solid rgba(135, 132, 132, 0.5);
+            background-color: white;
+            outline: none;
+            width: 100%; /* Makes dropdown width 100% of its container */
+            max-width: 300px; /* Limit the width */
+            transition: border-color 0.3s ease;
+        }
+
+        .selection-dropdown:focus {
+            border-color: #ff5733;
+        }
+
+        .button-container {
+            width: 100%; /* Ensures the button container takes up full width */
+            display: flex;
+            justify-content: center; /* Centers the button horizontally */
+        }
+
+        .save-button {
+            padding: 18px 30px; /* Increased padding for bigger button */
+            font-size: 20px; /* Larger font size */
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 80%; /* Makes button width 80% of its container */
+            max-width: 350px; /* Limit the button width */
+            transition: background-color 0.3s ease;
+        }
+
+        .save-button:hover {
+            background-color: #e14e2f;
+        }
+    </style>
 </head>
 
 <body>
