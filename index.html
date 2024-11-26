@@ -25,7 +25,7 @@
     <link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
     <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="images/favicon-192x192.png" sizes="192x192" type="image/png">
-    <link rel="icon" href="/images/favicon-512x512.png" sizes="512x512" type="image/png">
+    <link rel="icon" href="images/favicon-512x512.png" sizes="512x512" type="image/png">
     <!-- Apple Touch Icon for Safari bookmarks -->
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
@@ -39,14 +39,44 @@
         gtag('config', 'G-MQ8G7RBY0H');
     </script>
 
+<!-- Add this HTML in your webpage to let users select their branch -->
+<div id="branch-selection" style="display: none;">
+    <label for="branch-select">Select your branch:</label>
+    <select id="branch-select">
+        <option value="CSE">CSE</option>
+        <option value="AIML">AIML</option>
+        <option value="AI">AI</option>
+    </select>
+    <button onclick="saveBranchPreference()">Save</button>
+</div>
+
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
         window.OneSignalDeferred = window.OneSignalDeferred || [];
         OneSignalDeferred.push(async function (OneSignal) {
+            // Initialize OneSignal with your app ID
             await OneSignal.init({
                 appId: "961b2ded-f286-45bb-a843-cfec615f565c",
             });
+
+            // Show the branch selection dropdown
+            document.getElementById('branch-selection').style.display = 'block';
         });
+
+        function saveBranchPreference() {
+            const branch = document.getElementById('branch-select').value;
+
+            if (branch) {
+                OneSignal.push(function () {
+                    OneSignal.sendTags({
+                        branch: branch // Set the selected branch as a tag in OneSignal
+                    });
+                });
+                alert('Your branch has been saved!');
+            } else {
+                alert('Please select a branch.');
+            }
+        }
     </script>
 
 </head>
@@ -82,7 +112,7 @@
                 <li><a href="./ai/">CS</a></li>
               </ul>
             </li>
-            <li class="large-gap"><a href="#contact">&#128193 Contacts</a></li>
+            <li class="large-gap"><a href="#contacts">&#128193 Contacts</a></li>
             <li class="linkedin-button"><a href="https://www.linkedin.com/in/yeswanth-madasu-41525b297/" target="_blank">Linkedin</a></li>
           </ul>
         </div>
@@ -158,6 +188,7 @@
                 <h4>Work</h4>
                 <p>Kavya Sri</p>
                 <p>2nd Year CSE-B</p>
+                <a href="https://www.linkedin.com/in/venkatakumar-g-9349852a4/" target="_blank">linkedin</a>
             </div>
         </div>
         <h3><a href="https://wa.me/919676242565" target="_blank">Request Resources</a></h3>
